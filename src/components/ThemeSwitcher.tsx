@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import { DesktopIcon, MoonIcon, SunIcon } from '@radix-ui/react-icons'
-import { Button } from './ui/button'
+import { useEffect, useState } from "react";
+import { DesktopIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,53 +8,53 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from './ui/dropdown-menu'
+} from "./ui/dropdown-menu";
 
 const ThemeSwitcher = () => {
-  const [themeIcon, setThemeIcon] = useState(<SunIcon />)
+  const [themeIcon, setThemeIcon] = useState(<SunIcon />);
 
   const updateThemeIcon = () => {
     /* check localstorage BEFORE trying matchMedia */
-    if (localStorage.theme === 'dark')
-      setThemeIcon(<MoonIcon width={28} height={28} />)
-    else if (localStorage.theme === 'light')
-      setThemeIcon(<SunIcon width={28} height={28} />)
-    else if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      setThemeIcon(<MoonIcon width={28} height={28} />)
-    else if (window.matchMedia('(prefers-color-scheme: light)').matches)
-      setThemeIcon(<SunIcon width={28} height={28} />)
-    else setThemeIcon(<SunIcon width={28} height={28} />)
-  }
+    if (localStorage.theme === "dark")
+      setThemeIcon(<MoonIcon width={28} height={28} />);
+    else if (localStorage.theme === "light")
+      setThemeIcon(<SunIcon width={28} height={28} />);
+    else if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+      setThemeIcon(<MoonIcon width={28} height={28} />);
+    else if (window.matchMedia("(prefers-color-scheme: light)").matches)
+      setThemeIcon(<SunIcon width={28} height={28} />);
+    else setThemeIcon(<SunIcon width={28} height={28} />);
+  };
 
   useEffect(() => {
-    updateThemeIcon()
-  }, [])
+    updateThemeIcon();
+  }, []);
 
   const setLightTheme = () => {
-    localStorage.setItem('theme', 'light')
-    document.documentElement.classList.remove('dark')
+    localStorage.setItem("theme", "light");
+    document.documentElement.classList.remove("dark");
 
-    updateThemeIcon()
-  }
+    updateThemeIcon();
+  };
 
   const setDarkTheme = () => {
-    localStorage.setItem('theme', 'dark')
-    document.documentElement.classList.add('dark')
+    localStorage.setItem("theme", "dark");
+    document.documentElement.classList.add("dark");
 
-    updateThemeIcon()
-  }
+    updateThemeIcon();
+  };
 
   const setDefaultTheme = () => {
-    localStorage.removeItem('theme')
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      document.documentElement.classList.add('dark')
-    else document.documentElement.classList.remove('dark')
+    localStorage.removeItem("theme");
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+      document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
 
-    updateThemeIcon()
-  }
+    updateThemeIcon();
+  };
 
   return (
-    <div className="absolute right-4 top-4">
+    <div className="fixed right-4 top-4">
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger>
           <Button
@@ -92,7 +92,7 @@ const ThemeSwitcher = () => {
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
-  )
-}
+  );
+};
 
-export default ThemeSwitcher
+export default ThemeSwitcher;
