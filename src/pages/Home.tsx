@@ -12,7 +12,7 @@ function Home() {
   console.log(bodyStyles.getPropertyValue("--primary"));
 
   return (
-    <div className="transition-all duration-1000">
+    <div className="transition-all duration-1000 max-w-[100vw] overflow-x-hidden">
       <Header />
       <ThemeSwitcher />
       <div className="flex flex-col items-center m-auto">
