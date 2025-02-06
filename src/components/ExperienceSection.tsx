@@ -20,7 +20,7 @@ const ExperienceSection = () => {
             id={index.toString()}
             key={index}
             className={cn(
-              "flex flex-col rounded-lg border-[1px] border-muted-foreground shadow-lg p-1 sm:p-3",
+              "flex flex-col items-center rounded-lg border-[1px] border-muted-foreground shadow-lg p-1 sm:p-3",
               expandedCard === index ? "w-[100vw]" : "w-80 sm:w-96"
             )}
           >
@@ -29,7 +29,7 @@ const ExperienceSection = () => {
                 {experience.name}
               </div>
             </a>
-            <div className="flex flex-col h-full p-3 text-muted-foreground-2">
+            <div className="flex flex-col h-full p-3 w-fit text-muted-foreground-2">
               <div className="font-bold">{experience.role}</div>
               <ul className="h-full pl-4 my-4">
                 {experience.details.map((detail) => (
