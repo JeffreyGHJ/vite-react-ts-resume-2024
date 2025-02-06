@@ -5,42 +5,54 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useState } from "react";
 import { Button } from "./ui/button";
 import { ImageIcon } from "@radix-ui/react-icons";
 import { BsX } from "react-icons/bs";
 
 const images = import.meta.glob(
   "/src/assets/slides/ghostswap/*.{jpg,jpeg,png,gif}",
-  { eager: true }
+  {
+    eager: true,
+  }
 );
 
-const ExperienceSectionCarousel = () => {
-  const [open, setOpen] = useState(false);
+const ExperienceSectionCarousel = ({
+  index,
+  expandedCard,
+  setExpandedCard,
+}: any) => {
+  console.log("images:", images);
 
   return (
     <>
-      {open && (
+      {expandedCard === index && (
         <div className="flex justify-center h-fit">
-          <Carousel className="w-full h-fit">
-            <CarouselContent>
+          <Carousel className="w-full max-h-screen py-8 pb-20 [&>*]:h-full">
+            <CarouselContent
+              id="content"
+              className="h-full [&>*]:h-full w-full "
+            >
               {Object.keys(images).map((image, index) => (
-                <CarouselItem key={index} className="">
+                <CarouselItem
+                  key={index}
+                  id="item"
+                  className="flex justify-center"
+                >
                   <img
                     src={image as string}
                     alt={`image-${index}`}
-                    className="object-cover h-full"
+                    className="object-contain "
                   />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="relative h-10 mt-2 mx-14">
+            <div style={{ height: "2.5rem" }} className="relative mt-4 mx-14">
               <CarouselPrevious />
               <CarouselNext />
               <Button
                 size={"sm"}
                 variant={"ghost"}
-                onClick={() => setOpen(false)}
+                onClick={() => setExpandedCard(null)}
                 className="absolute translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 text-muted-2"
               >
                 <BsX className="size-8" />
@@ -49,9 +61,9 @@ const ExperienceSectionCarousel = () => {
           </Carousel>
         </div>
       )}
-      {!open && (
+      {expandedCard !== index && (
         <Button
-          onClick={() => setOpen(true)}
+          onClick={() => setExpandedCard(index)}
           variant={"ghost"}
           className="text-xs text-muted-2"
         >

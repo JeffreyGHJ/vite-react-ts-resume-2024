@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import TooltipTest from './TooltipTest'
-import { cn } from '@/lib/utils'
+import { useState } from "react";
+import TooltipTest from "./TooltipTest";
+import { cn } from "@/lib/utils";
 
 const Skill = ({ index, skill }: any) => {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const getSkillStyle = () => {
-    return isExpanded ? 'w-52 h-40' : ''
-  }
+    return isExpanded ? "w-52 h-40" : "";
+  };
 
   return (
     <TooltipTest>
@@ -18,15 +18,15 @@ const Skill = ({ index, skill }: any) => {
       >
         <div
           className={cn(
-            'flex flex-col w-[68.8px] p-2 gap-1  h-[68.8px] border-muted-foreground text-muted-foreground-2 dark:border-indigo-800 border-solid rounded-lg border-[3px] cursor-pointer transition-all',
+            "flex flex-col w-[68.8px] p-2 gap-1  h-[68.8px] border-muted-foreground text-muted-foreground-2 dark:border-indigo-800 border-solid rounded-lg border shadow-lg cursor-pointer transition-all",
             getSkillStyle()
           )}
         >
           <div className="flex w-full h-12 gap-2">
             <div
               className={
-                ' transition-all duration-300 ' +
-                (isExpanded ? 'text-4xl' : 'text-5xl')
+                " transition-all duration-300 " +
+                (isExpanded ? "text-4xl" : "text-5xl")
               }
             >
               {skill.icon}
@@ -48,6 +48,6 @@ const Skill = ({ index, skill }: any) => {
         </div> */}
       </div>
     </TooltipTest>
-  )
-}
-export default Skill
+  );
+};
+export default Skill;

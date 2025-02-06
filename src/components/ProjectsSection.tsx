@@ -1,13 +1,13 @@
-import Projects from '@/lib/constants/Projects'
-import SectionHeading from './SectionHeading'
+import Projects from "@/lib/constants/Projects";
+import SectionHeading from "./SectionHeading";
 
 const ProjectsSection = () => {
   return (
-    <div className="w-full">
+    <div className="w-full max-w-5xl">
       <SectionHeading>Personal Projects</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 tracking-tight leading-[1.4] sm:p-0">
         {Projects.map((project) => (
-          <div className="flex flex-col rounded-lg border-[3px] border-muted-foreground w-80 sm:w-96 p-3">
+          <div className="flex flex-col p-3 border rounded-lg shadow-lg border-muted-foreground w-80 sm:w-96">
             {project.site_url ? (
               <a
                 href={project.site_url}
@@ -41,6 +41,6 @@ const ProjectsSection = () => {
         ))}
       </div>
     </div>
-  )
-}
-export default ProjectsSection
+  );
+};
+export default ProjectsSection;

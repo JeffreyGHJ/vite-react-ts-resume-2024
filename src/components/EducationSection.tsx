@@ -1,5 +1,5 @@
-import Education from '@/lib/constants/Education'
-import SectionHeading from './SectionHeading'
+import Education from "@/lib/constants/Education";
+import SectionHeading from "./SectionHeading";
 
 const EducationSection = () => {
   return (
@@ -7,7 +7,7 @@ const EducationSection = () => {
       <SectionHeading>Education</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 tracking-tight leading-[1.4] sm:p-0">
         {Education.map((item) => (
-          <div className="rounded-lg border-[3px] border-muted-foreground w-80 sm:w-96 p-1 sm:p-3 flex flex-col">
+          <div className="flex flex-col p-1 border rounded-lg shadow-lg border-muted-foreground w-80 sm:w-96 sm:p-3">
             <a href={item.site_url} target="_blank" rel="noopener noreferrer">
               <div className="flex content-center justify-center w-full h-24 text-5xl rounded-sm cursor-pointer bg-muted-2 dark:bg-muted-foreground-2">
                 <img
@@ -28,6 +28,6 @@ const EducationSection = () => {
         ))}
       </div>
     </>
-  )
-}
-export default EducationSection
+  );
+};
+export default EducationSection;

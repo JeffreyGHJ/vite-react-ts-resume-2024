@@ -8,10 +8,10 @@ const ResumeDownload = () => {
     <div className="w-full">
       <SectionHeading>Download My Resume</SectionHeading>
 
-      <div className="flex justify-center max-w-lg gap-8 m-auto text-center">
+      <div className="flex flex-wrap justify-center gap-4 px-2 m-auto text-center sm:gap-8">
         <Button
           variant={"outline"}
-          className="w-full p-0 border-2 rounded-xl h-fit border-muted-foreground"
+          className="p-0 border shadow-lg w-60 rounded-xl h-fit border-muted-foreground"
           asChild
         >
           <a
@@ -25,7 +25,7 @@ const ResumeDownload = () => {
         </Button>
         <Button
           variant={"outline"}
-          className="w-full p-0 border-2 h-fit border-muted-foreground rounded-xl"
+          className="p-0 border shadow-lg w-60 h-fit border-muted-foreground rounded-xl"
           asChild
         >
           <a
