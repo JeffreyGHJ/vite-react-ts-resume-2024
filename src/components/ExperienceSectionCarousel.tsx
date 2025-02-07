@@ -10,7 +10,7 @@ import { ImageIcon } from "@radix-ui/react-icons";
 import { BsX } from "react-icons/bs";
 
 const images = import.meta.glob(
-  "/src/assets/slides/ghostswap/*.{jpg,jpeg,png,gif}",
+  "/public/slides/ghostswap/*.{jpg,jpeg,png,gif}",
   {
     eager: true,
   }
