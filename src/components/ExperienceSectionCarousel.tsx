@@ -8,6 +8,7 @@ import {
 import { Button } from "./ui/button";
 import { ImageIcon } from "@radix-ui/react-icons";
 import { BsX } from "react-icons/bs";
+import { useEffect } from "react";
 
 const images = import.meta.glob(
   "/public/slides/ghostswap/*.{jpg,jpeg,png,gif}",
@@ -23,6 +24,12 @@ const ExperienceSectionCarousel = ({
 }: any) => {
   console.log("images:", images);
 
+  useEffect(() => {
+    Object.keys(images).map((img) => {
+      console.log("img:", img);
+    });
+  }, []);
+
   return (
     <>
       {expandedCard === index && (
@@ -35,7 +42,7 @@ const ExperienceSectionCarousel = ({
               {Object.keys(images).map((image, index) => (
                 <CarouselItem
                   key={index}
-                  id="item"
+                  id={`${image}`}
                   className="flex justify-center"
                 >
                   <img
