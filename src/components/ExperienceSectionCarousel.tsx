@@ -27,6 +27,7 @@ const ExperienceSectionCarousel = ({
   useEffect(() => {
     Object.keys(images).map((img) => {
       console.log("img:", img);
+      console.log(img.split("/"));
     });
   }, []);
 
@@ -46,7 +47,7 @@ const ExperienceSectionCarousel = ({
                   className="flex justify-center"
                 >
                   <img
-                    src={"/slides/ghostswap/image.png"}
+                    src={image.replace("/public", "")}
                     alt={`image-${index}`}
                     className="object-contain "
                   />
