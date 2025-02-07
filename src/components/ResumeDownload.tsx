@@ -29,7 +29,7 @@ const ResumeDownload = () => {
           asChild
         >
           <a
-            href="/public/documents/Jeffrey_Hernandez_Extended_Resume_2025.pdf"
+            href="/documents/Jeffrey_Hernandez_Extended_Resume_2025.pdf"
             // download={"Jeffrey_Hernandez_Extended_Resume_2025.pdf"}
             className="flex flex-col items-center gap-4 p-4 pb-8 text-xl w-fit"
           >
