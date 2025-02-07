@@ -18,6 +18,8 @@ const ResumeDownload = () => {
             href="/documents/Jeffrey_Hernandez_Standard_Resume_2025.pdf"
             // download={"Jeffrey_Hernandez_Standard_Resume_2025.pdf"}
             className="flex flex-col items-center gap-4 p-4 pb-8 text-xl w-fit"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Standard Resume
             <BsFiletypePdf className="size-20 text-muted-foreground-2" />
@@ -32,6 +34,8 @@ const ResumeDownload = () => {
             href="/documents/Jeffrey_Hernandez_Extended_Resume_2025.pdf"
             // download={"Jeffrey_Hernandez_Extended_Resume_2025.pdf"}
             className="flex flex-col items-center gap-4 p-4 pb-8 text-xl w-fit"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Extended Resume
             <div className="relative">
