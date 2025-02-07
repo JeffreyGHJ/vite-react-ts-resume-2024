@@ -1,11 +1,15 @@
 import Experience from "@/lib/constants/Experience";
 import SectionHeading from "./SectionHeading";
-import ExperienceSectionCarousel from "./ExperienceSectionCarousel";
+// import ExperienceSectionCarousel from "./ExperienceSectionCarousel";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ExperienceSection = () => {
   const [expandedCard, setExpandedCard] = useState(null);
+
+  useEffect(() => {
+    setExpandedCard(null);
+  }, []);
 
   return (
     <div
@@ -40,11 +44,11 @@ const ExperienceSection = () => {
                 [{experience.location}] {experience.timeframe}
               </div>
             </div>
-            <ExperienceSectionCarousel
+            {/* <ExperienceSectionCarousel
               index={index}
               expandedCard={expandedCard}
               setExpandedCard={setExpandedCard}
-            />
+            /> */}
           </div>
         ))}
       </div>
