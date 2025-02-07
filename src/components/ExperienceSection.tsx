@@ -1,6 +1,6 @@
 import Experience from "@/lib/constants/Experience";
 import SectionHeading from "./SectionHeading";
-// import ExperienceSectionCarousel from "./ExperienceSectionCarousel";
+import ExperienceSectionCarousel from "./ExperienceSectionCarousel";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
@@ -36,19 +36,21 @@ const ExperienceSection = () => {
             <div className="flex flex-col h-full p-3 w-fit text-muted-foreground-2">
               <div className="font-bold">{experience.role}</div>
               <ul className="h-full pl-4 my-4">
-                {experience.details.map((detail) => (
-                  <li className="mb-2 list-disc">{detail}</li>
+                {experience.details.map((detail, index) => (
+                  <li key={index} className="mb-2 list-disc">
+                    {detail}
+                  </li>
                 ))}
               </ul>
               <div className="font-bold">
                 [{experience.location}] {experience.timeframe}
               </div>
             </div>
-            {/* <ExperienceSectionCarousel
+            <ExperienceSectionCarousel
               index={index}
               expandedCard={expandedCard}
               setExpandedCard={setExpandedCard}
-            /> */}
+            />
           </div>
         ))}
       </div>

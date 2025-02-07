@@ -11,14 +11,12 @@ const SkillsSection = () => {
       <SectionHeading>Skills</SectionHeading>
       <div className="flex flex-wrap justify-center gap-2 mb-2">
         {Object.values(Skills.primary).map((skill: any, index: number) => {
-          console.log(skill);
-          return <Skill index={index} skill={skill} />;
+          return <Skill key={index} index={index} skill={skill} />;
         })}
       </div>
       <div className="flex flex-wrap justify-center gap-2">
         {Object.values(Skills.secondary).map((skill: any, index: number) => {
-          console.log(skill);
-          return <Skill index={index} skill={skill} />;
+          return <Skill key={index} index={index} skill={skill} />;
         })}
       </div>
     </div>

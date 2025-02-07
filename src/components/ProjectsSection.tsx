@@ -6,8 +6,11 @@ const ProjectsSection = () => {
     <div className="w-full max-w-5xl">
       <SectionHeading>Personal Projects</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 tracking-tight leading-[1.4] sm:p-0">
-        {Projects.map((project) => (
-          <div className="flex flex-col p-3 border rounded-lg shadow-lg border-muted-foreground w-80 sm:w-96">
+        {Projects.map((project, index) => (
+          <div
+            key={index}
+            className="flex flex-col p-3 border rounded-lg shadow-lg border-muted-foreground w-80 sm:w-96"
+          >
             {project.site_url ? (
               <a
                 href={project.site_url}
@@ -28,8 +31,10 @@ const ProjectsSection = () => {
               <div className="my-3">{project.description}</div>
               <div className="h-full pl-4 ">
                 <ul className="list-disc">
-                  {project.highlights.map((highlight) => (
-                    <li className="mb-2">{highlight}</li>
+                  {project.highlights.map((highlight, index) => (
+                    <li key={index} className="mb-2">
+                      {highlight}
+                    </li>
                   ))}
                 </ul>
               </div>
