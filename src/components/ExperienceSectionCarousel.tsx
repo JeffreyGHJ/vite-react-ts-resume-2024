@@ -46,7 +46,7 @@ const ExperienceSectionCarousel = ({
                   className="flex justify-center"
                 >
                   <img
-                    src={"/public/slides/ghostswap/image.png"}
+                    src={"/slides/ghostswap/image.png"}
                     alt={`image-${index}`}
                     className="object-contain "
                   />
