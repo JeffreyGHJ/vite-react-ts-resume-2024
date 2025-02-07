@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TooltipTest from "./TooltipTest";
 import { cn } from "@/lib/utils";
 
 const Skill = ({ index, skill }: any) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    setIsExpanded(false);
+  }, []);
 
   const getSkillStyle = () => {
     return isExpanded ? "w-52 h-40" : "";
@@ -14,11 +18,11 @@ const Skill = ({ index, skill }: any) => {
       <div
         tabIndex={index}
         className="relative"
-        onClick={() => setIsExpanded(!isExpanded)}
+        // onClick={() => setIsExpanded(!isExpanded)}
       >
         <div
           className={cn(
-            "flex flex-col w-[68.8px] p-2 gap-1  h-[68.8px] border-muted-foreground text-muted-foreground-2 dark:border-indigo-800 border-solid rounded-lg border shadow-lg cursor-pointer transition-all",
+            "flex flex-col p-2 gap-1 border-muted-foreground text-muted-foreground-2 border-solid rounded-lg border shadow-lg cursor-pointer transition-all",
             getSkillStyle()
           )}
         >
@@ -43,9 +47,9 @@ const Skill = ({ index, skill }: any) => {
             </div>
           )}
         </div>
-        {/* <div className="absolute bottom-0 px-1 text-[9px] rounded-lg font-thin leading-[0.7] translate-y-1/2 bg-background right-[5px]">
-          Unreal Engine
-        </div> */}
+        <div className="absolute bottom-0 px-1 text-[9px] rounded-lg font-thin leading-[0.7] translate-y-1/2 bg-background right-[5px]">
+          {skill.name}
+        </div>
       </div>
     </TooltipTest>
   );
