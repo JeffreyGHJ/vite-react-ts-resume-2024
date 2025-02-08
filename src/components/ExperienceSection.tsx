@@ -50,6 +50,7 @@ const ExperienceSection = () => {
               index={index}
               expandedCard={expandedCard}
               setExpandedCard={setExpandedCard}
+              sectionName={experience.sectionName}
             />
           </div>
         ))}

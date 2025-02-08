@@ -8,28 +8,37 @@ import {
 import { Button } from "./ui/button";
 import { ImageIcon } from "@radix-ui/react-icons";
 import { BsX } from "react-icons/bs";
-import { useEffect } from "react";
-
-const images = import.meta.glob(
-  "/public/slides/ghostswap/*.{jpg,jpeg,png,gif}",
-  {
-    eager: true,
-  }
-);
+import { useEffect, useState } from "react";
 
 const ExperienceSectionCarousel = ({
   index,
   expandedCard,
   setExpandedCard,
+  sectionName,
 }: any) => {
-  console.log("images:", images);
+  const [images, setImages] = useState([]);
+
+  const getJson = async (filename: string) => {
+    try {
+      const response = await fetch(`/slides/${filename}/images.json`);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      setImages(data);
+    } catch (error) {
+      console.error("Error loading JSON:", error);
+    }
+  };
 
   useEffect(() => {
-    Object.keys(images).map((img) => {
-      console.log("img:", img);
-      console.log(img.split("/"));
-    });
+    getJson(sectionName);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // useEffect(() => {
+  //   console.log("images: ", images);
+  // }, [images]);
 
   return (
     <>
@@ -40,19 +49,16 @@ const ExperienceSectionCarousel = ({
               id="content"
               className="h-full [&>*]:h-full w-full "
             >
-              {Object.keys(images).map((image, index) => (
-                <CarouselItem
-                  key={index}
-                  id={`${image}`}
-                  className="flex justify-center"
-                >
-                  <img
-                    src={image.replace("/public", "")}
-                    alt={`image-${index}`}
-                    className="object-contain "
-                  />
-                </CarouselItem>
-              ))}
+              {images.length > 0 &&
+                images?.map((image: any, index) => (
+                  <CarouselItem key={index} className="flex justify-center">
+                    <img
+                      src={`/slides/${sectionName}/${image?.src}`}
+                      alt={`image-${index}`}
+                      className="object-contain "
+                    />
+                  </CarouselItem>
+                ))}
             </CarouselContent>
             <div style={{ height: "2.5rem" }} className="relative mt-4 mx-14">
               <CarouselPrevious />
@@ -69,11 +75,11 @@ const ExperienceSectionCarousel = ({
           </Carousel>
         </div>
       )}
-      {expandedCard !== index && (
+      {expandedCard !== index && images.length > 0 && (
         <Button
           onClick={() => setExpandedCard(index)}
           variant={"ghost"}
-          className="text-xs text-muted-2"
+          className="text-sm text-muted-foreground/70"
         >
           View Slideshow
           <ImageIcon />

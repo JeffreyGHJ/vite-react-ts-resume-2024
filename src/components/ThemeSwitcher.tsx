@@ -60,7 +60,8 @@ const ThemeSwitcher = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="border border-secondary"
+            className="p-1 border border-secondary"
+            asChild
           >
             {themeIcon}
           </Button>

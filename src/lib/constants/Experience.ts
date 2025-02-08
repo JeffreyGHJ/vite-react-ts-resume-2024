@@ -11,6 +11,7 @@ const Experience = [
     ],
     timeframe: "2022 - 2023",
     location: "Remote",
+    sectionName: "ghostswap",
   },
   {
     name: "LittleGhosts.io",
@@ -25,6 +26,7 @@ const Experience = [
     ],
     timeframe: "2023 - 2024",
     location: "Remote",
+    sectionName: "littleghosts",
   },
   {
     name: "Phantasma MMO",
@@ -40,6 +42,7 @@ const Experience = [
     ],
     timeframe: "2024 - 2024",
     location: "Remote",
+    sectionName: "phantasma",
   },
   {
     name: "Atlantis.fun",
@@ -55,6 +58,7 @@ const Experience = [
     ],
     timeframe: "2024 - 2025",
     location: "Remote",
+    sectionName: "atlantis",
   },
 ];
 
