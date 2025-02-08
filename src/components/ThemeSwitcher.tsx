@@ -54,13 +54,13 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div className="fixed right-4 top-4 z-[999999] bg-background">
+    <div className="fixed right-4 top-4 z-[999999]">
       <DropdownMenu modal={false}>
-        <DropdownMenuTrigger>
+        <DropdownMenuTrigger className="bg-transparent">
           <Button
             variant="ghost"
             size="icon"
-            className="p-1 border border-secondary"
+            className="p-1 border shadow-md bg-background border-secondary"
             asChild
           >
             {themeIcon}
