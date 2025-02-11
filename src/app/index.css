@@ -89,10 +89,10 @@
 
 @layer components {
   .btn {
-    @apply duration-300 transition-all;
+    @apply transition-all duration-300;
   }
   .btn:hover {
-    @apply dark:border-blue-300 dark:text-blue-300 border-blue-600 text-blue-600 shadow-md dark:shadow-blue-300 shadow-blue-600;
+    @apply text-blue-600 border-blue-600 shadow-md dark:border-blue-300 dark:text-blue-300 dark:shadow-blue-300 shadow-blue-600;
   }
 }
 

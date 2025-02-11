@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 const ProjectsSection = () => {
   return (
-    <div className="w-full max-w-5xl">
+    <div className="w-full max-w-5xl m-auto">
       <SectionHeading>Personal Projects</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 tracking-tight leading-[1.4] sm:p-0">
         {Projects.map((project, index) => (

@@ -14,6 +14,7 @@ const ExperienceSection = () => {
   return (
     <div
       className={cn(
+        "m-auto",
         expandedCard === null ? "max-w-5xl" : "w-[calc(100vw-2.5rem)]"
       )}
     >
@@ -21,7 +22,7 @@ const ExperienceSection = () => {
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 sm:p-0 leading-[1.4] tracking-tight">
         {[...Experience].reverse().map((experience, index) => (
           <div
-            id={index.toString()}
+            id={experience.sectionName}
             key={index}
             className={cn(
               "flex flex-col items-center rounded-lg border-[1px] border-muted-foreground shadow-lg p-1 sm:p-3",

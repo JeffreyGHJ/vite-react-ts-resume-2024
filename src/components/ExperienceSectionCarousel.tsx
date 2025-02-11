@@ -10,6 +10,11 @@ import { ImageIcon } from "@radix-ui/react-icons";
 import { BsX } from "react-icons/bs";
 import { useEffect, useState } from "react";
 
+const scrollIntoViewOptions: ScrollIntoViewOptions = {
+  behavior: "smooth",
+  block: "center",
+};
+
 const ExperienceSectionCarousel = ({
   index,
   expandedCard,
@@ -36,6 +41,22 @@ const ExperienceSectionCarousel = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const scrollCarouselToCenter = () => {
+    setTimeout(() => {
+      document
+        .getElementById(`${sectionName}-carousel`)
+        ?.scrollIntoView(scrollIntoViewOptions);
+    }, 50);
+  };
+
+  const recenterAfterCarouselClose = () => {
+    setTimeout(() => {
+      document
+        .getElementById(sectionName)
+        ?.scrollIntoView(scrollIntoViewOptions);
+    }, 50);
+  };
+
   // useEffect(() => {
   //   console.log("images: ", images);
   // }, [images]);
@@ -43,8 +64,11 @@ const ExperienceSectionCarousel = ({
   return (
     <>
       {expandedCard === index && (
-        <div className="flex justify-center h-fit">
-          <Carousel className="w-full max-h-screen py-8 pb-20 [&>*]:h-full">
+        <div
+          id={`${sectionName}-carousel`}
+          className="flex justify-center w-full h-fit"
+        >
+          <Carousel className="w-full h-screen max-h-screen py-8 pb-20 [&>*]:h-full">
             <CarouselContent
               id="content"
               className="h-full [&>*]:h-full w-full "
@@ -55,21 +79,24 @@ const ExperienceSectionCarousel = ({
                     <img
                       src={`/slides/${sectionName}/${image?.src}`}
                       alt={`image-${index}`}
-                      className="object-contain "
+                      className="object-contain"
                     />
                   </CarouselItem>
                 ))}
             </CarouselContent>
-            <div style={{ height: "2.5rem" }} className="relative mt-4 mx-14">
-              <CarouselPrevious />
-              <CarouselNext />
+            <div style={{ height: "3rem" }} className="relative mt-4 mx-14">
+              <CarouselPrevious className="size-12 [&>svg]:size-6 hover:stroke-primary stroke-muted-2 border-primary/40 hover:bg-transparent hover:border-primary" />
+              <CarouselNext className="size-12 [&>svg]:size-6 hover:stroke-primary stroke-muted-2 border-primary/40 hover:bg-transparent hover:border-primary" />
               <Button
                 size={"sm"}
                 variant={"ghost"}
-                onClick={() => setExpandedCard(null)}
-                className="absolute translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 text-muted-2"
+                onClick={() => {
+                  setExpandedCard(null);
+                  recenterAfterCarouselClose();
+                }}
+                className="absolute translate-x-1/2 -translate-y-1/2 hover:bg-transparent top-1/2 right-1/2 text-muted-2"
               >
-                <BsX className="size-8" />
+                <BsX className="size-12" />
               </Button>
             </div>
           </Carousel>
@@ -77,12 +104,15 @@ const ExperienceSectionCarousel = ({
       )}
       {expandedCard !== index && images.length > 0 && (
         <Button
-          onClick={() => setExpandedCard(index)}
+          onClick={() => {
+            setExpandedCard(index);
+            scrollCarouselToCenter();
+          }}
           variant={"ghost"}
-          className="text-sm text-muted-foreground/70"
+          className="text-sm text-primary/70 dark:text-muted-foreground/70"
         >
           View Slideshow
-          <ImageIcon />
+          <ImageIcon className="size-5" />
         </Button>
       )}
     </>

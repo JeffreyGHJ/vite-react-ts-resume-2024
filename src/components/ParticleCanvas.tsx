@@ -1,7 +1,7 @@
 import ParticleOptionsDark from "@/lib/constants/ParticleOptionsDark";
 import ParticleOptionsLight from "@/lib/constants/ParticleOptionsLight";
 import { loadAll } from "@tsparticles/all";
-import { Container } from "@tsparticles/engine";
+// import { Container } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useState } from "react";
 
@@ -41,8 +41,6 @@ const ParticleCanvas = () => {
   }, []);
 
   useEffect(() => {
-    console.log(isDarkMode);
-
     if (isDarkMode) {
       setParticleOptions(ParticleOptionsDark);
     } else {
@@ -50,16 +48,16 @@ const ParticleCanvas = () => {
     }
   }, [isDarkMode]);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
+  // const particlesLoaded = async (container?: Container): Promise<void> => {
+  //   console.log(container);
+  // };
 
   return (
     <>
       {init === true && (
         <Particles
           id="tsparticles"
-          particlesLoaded={particlesLoaded}
+          // particlesLoaded={particlesLoaded}
           options={particleOptions}
           className="absolute w-full h-full"
         />

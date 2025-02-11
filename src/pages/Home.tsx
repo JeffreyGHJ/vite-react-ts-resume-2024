@@ -8,21 +8,20 @@ import ResumeDownload from "@/components/ResumeDownload";
 import Header from "@/components/Header";
 
 function Home() {
-  const bodyStyles = window.getComputedStyle(document.body);
-  console.log(bodyStyles.getPropertyValue("--primary"));
+  // Useful debug
+  // const bodyStyles = window.getComputedStyle(document.body);
+  // console.log(bodyStyles.getPropertyValue("--primary"));
 
   return (
     <div className="transition-all duration-1000 max-w-[100vw] overflow-x-hidden">
       <Header />
       <ThemeSwitcher />
-      <div className="flex flex-col items-center m-auto">
-        <ResumeDownload />
-        <ExperienceSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <EducationSection />
-        <AppFooter />
-      </div>
+      <ResumeDownload />
+      <ExperienceSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <EducationSection />
+      <AppFooter />
     </div>
   );
 }

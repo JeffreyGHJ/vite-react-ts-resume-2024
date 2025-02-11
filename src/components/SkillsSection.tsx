@@ -3,9 +3,6 @@ import Skill from "./Skill";
 import SectionHeading from "./SectionHeading";
 
 const SkillsSection = () => {
-  const bodyStyles = window.getComputedStyle(document.body);
-  console.log(bodyStyles.getPropertyValue("--primary"));
-
   return (
     <div className="my-16 space-y-3">
       <SectionHeading>Skills</SectionHeading>
