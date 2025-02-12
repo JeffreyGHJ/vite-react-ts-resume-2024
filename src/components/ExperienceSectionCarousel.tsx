@@ -61,6 +61,10 @@ const ExperienceSectionCarousel = ({
   //   console.log("images: ", images);
   // }, [images]);
 
+  const isVideoFile = (srcString: string) => {
+    return srcString.split(".")[srcString.split(".").length - 1] === "mp4";
+  };
+
   return (
     <>
       {expandedCard === index && (
@@ -76,11 +80,20 @@ const ExperienceSectionCarousel = ({
               {images.length > 0 &&
                 images?.map((image: any, index) => (
                   <CarouselItem key={index} className="flex justify-center">
-                    <img
-                      src={`/slides/${sectionName}/${image?.src}`}
-                      alt={`image-${index}`}
-                      className="object-contain"
-                    />
+                    {!isVideoFile(image.src) ? (
+                      <img
+                        src={`/slides/${sectionName}/${image?.src}`}
+                        alt={`image-${index}`}
+                        className="object-contain"
+                      />
+                    ) : (
+                      <video playsInline autoPlay muted loop>
+                        <source
+                          src={`/slides/${sectionName}/${image?.src}`}
+                          type="video/mp4"
+                        />
+                      </video>
+                    )}
                   </CarouselItem>
                 ))}
             </CarouselContent>
