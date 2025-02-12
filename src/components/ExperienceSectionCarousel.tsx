@@ -57,10 +57,6 @@ const ExperienceSectionCarousel = ({
     }, 50);
   };
 
-  // useEffect(() => {
-  //   console.log("images: ", images);
-  // }, [images]);
-
   const isVideoFile = (srcString: string) => {
     return srcString.split(".")[srcString.split(".").length - 1] === "mp4";
   };
@@ -87,7 +83,7 @@ const ExperienceSectionCarousel = ({
                         className="object-contain"
                       />
                     ) : (
-                      <video playsInline autoPlay muted loop>
+                      <video playsInline autoPlay muted loop controls>
                         <source
                           src={`/slides/${sectionName}/${image?.src}`}
                           type="video/mp4"
