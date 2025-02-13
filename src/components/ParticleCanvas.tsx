@@ -3,6 +3,7 @@ import ParticleOptionsLight from "@/lib/constants/ParticleOptionsLight";
 import { loadAll } from "@tsparticles/all";
 // import { Container } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
+import React from "react";
 import { useEffect, useState } from "react";
 
 const ParticleCanvas = () => {
@@ -65,5 +66,4 @@ const ParticleCanvas = () => {
     </>
   );
 };
-
-export default ParticleCanvas;
+export default React.memo(ParticleCanvas);

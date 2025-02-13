@@ -1,9 +1,55 @@
-import { FaJava } from "react-icons/fa";
-import { SiC, SiCsswizardry, SiJavascript } from "react-icons/si";
+import { FaGit, FaJava, FaPython, FaReact } from "react-icons/fa";
+import {
+  SiBlender,
+  SiC,
+  SiCsswizardry,
+  SiExpress,
+  SiIntellijidea,
+  SiJavascript,
+  SiMongodb,
+  SiMongoose,
+  SiNextdotjs,
+  SiPostgresql,
+  SiUnity,
+  SiUnrealengine,
+} from "react-icons/si";
 import { TiHtml5 } from "react-icons/ti";
-import { TbBrandCSharp } from "react-icons/tb";
+import {
+  TbBrandAdobePhotoshop,
+  TbBrandCSharp,
+  TbBrandVscode,
+  TbSql,
+} from "react-icons/tb";
 
 export const Skills = {
+  group1: {
+    react: {
+      name: "React",
+      icon: <FaReact />,
+    },
+    nextjs: {
+      name: "Next.js",
+      icon: <SiNextdotjs />,
+    },
+  },
+  group2: {
+    express: {
+      name: "Express.js",
+      icon: <SiExpress />,
+    },
+    mongodb: {
+      name: "MongoDB",
+      icon: <SiMongodb />,
+    },
+    mongoose: {
+      name: "Mongoose",
+      icon: <SiMongoose />,
+    },
+    postgresql: {
+      name: "PostgreSQL",
+      icon: <SiPostgresql />,
+    },
+  },
   primary: {
     html: {
       name: "HTML",
@@ -36,6 +82,46 @@ export const Skills = {
     csharp: {
       name: "C#",
       icon: <TbBrandCSharp />,
+    },
+    python: {
+      name: "Python",
+      icon: <FaPython />,
+    },
+    sql: {
+      name: "SQL",
+      icon: <TbSql />,
+    },
+  },
+  group3: {
+    unrealengine: {
+      name: "Unreal Engine",
+      icon: <SiUnrealengine />,
+    },
+    unity: {
+      name: "Unity",
+      icon: <SiUnity />,
+    },
+    blender: {
+      name: "Blender",
+      icon: <SiBlender />,
+    },
+    photoshop: {
+      name: "PhotoShop",
+      icon: <TbBrandAdobePhotoshop />,
+    },
+  },
+  group4: {
+    vscode: {
+      name: "VS Code",
+      icon: <TbBrandVscode />,
+    },
+    intellij: {
+      name: "IntelliJ IDEA",
+      icon: <SiIntellijidea />,
+    },
+    git: {
+      name: "Git",
+      icon: <FaGit />,
     },
   },
 };
