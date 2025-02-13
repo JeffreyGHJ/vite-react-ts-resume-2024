@@ -9,6 +9,7 @@ import { Button } from "./ui/button";
 import { ImageIcon } from "@radix-ui/react-icons";
 import { BsX } from "react-icons/bs";
 import { useEffect, useState } from "react";
+import SlideCaption from "./SlideCaption";
 
 const scrollIntoViewOptions: ScrollIntoViewOptions = {
   behavior: "smooth",
@@ -22,6 +23,7 @@ const ExperienceSectionCarousel = ({
   sectionName,
 }: any) => {
   const [images, setImages] = useState([]);
+  const [showCaptions, setShowCaptions] = useState(true);
 
   const getJson = async (filename: string) => {
     try {
@@ -75,21 +77,33 @@ const ExperienceSectionCarousel = ({
             >
               {images.length > 0 &&
                 images?.map((image: any, index) => (
-                  <CarouselItem key={index} className="flex justify-center">
-                    {!isVideoFile(image.src) ? (
-                      <img
-                        src={`/slides/${sectionName}/${image?.src}`}
-                        alt={`image-${index}`}
-                        className="object-contain"
-                      />
-                    ) : (
-                      <video playsInline autoPlay muted loop controls>
-                        <source
+                  <CarouselItem
+                    key={index}
+                    className="flex flex-col items-center justify-center"
+                  >
+                    <div className="relative select-none">
+                      {!isVideoFile(image.src) ? (
+                        <img
                           src={`/slides/${sectionName}/${image?.src}`}
-                          type="video/mp4"
+                          alt={`image-${index}`}
+                          className="object-contain"
                         />
-                      </video>
-                    )}
+                      ) : (
+                        <video playsInline autoPlay muted loop controls>
+                          <source
+                            src={`/slides/${sectionName}/${image?.src}`}
+                            type="video/mp4"
+                          />
+                        </video>
+                      )}
+                    </div>
+                    <SlideCaption
+                      caption={image.caption}
+                      showCaptions={showCaptions}
+                      setShowCaptions={setShowCaptions}
+                      sectionName={sectionName}
+                      index={index}
+                    />
                   </CarouselItem>
                 ))}
             </CarouselContent>
