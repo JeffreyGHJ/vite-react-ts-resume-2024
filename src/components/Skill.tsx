@@ -45,7 +45,7 @@ const Skill = ({ index, skill }: any) => {
           </div>
         )}
       </div>
-      <div className="absolute bottom-0 px-1 text-[9px] rounded-lg font-thin leading-[0.7] translate-y-1/2 bg-background right-[5px]">
+      <div className="absolute bottom-0 px-1 text-[10px] rounded-lg leading-[0.7] translate-y-1/2 bg-background right-[5px]">
         {skill.name}
       </div>
     </div>
