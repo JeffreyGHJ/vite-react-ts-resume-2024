@@ -28,7 +28,7 @@ const Skill = ({ index, skill }: any) => {
           <div
             className={
               " transition-all duration-300 " +
-              (isExpanded ? "text-4xl" : "text-7xl")
+              (isExpanded ? "text-4xl" : "text-[2.5rem] sm:text-7xl")
             }
           >
             {skill.icon}
@@ -45,7 +45,7 @@ const Skill = ({ index, skill }: any) => {
           </div>
         )}
       </div>
-      <div className="absolute bottom-0 px-1 text-[10px] rounded-lg leading-[0.7] translate-y-1/2 bg-background right-[5px]">
+      <div className="absolute bottom-0 px-1 text-[7px] sm:text-[10px] rounded-lg leading-[0.7] translate-y-1/2 bg-background right-[2px] sm:right-[5px]">
         {skill.name}
       </div>
     </div>
