@@ -1,48 +1,144 @@
 [
-  { "src": "image0.png", "caption": "Caption test!" },
+  {
+    "src": "image0.png",
+    "caption": "The 'Arena' route. This was the first page and first few components added on day 1 of building Atlantis. <br> This website started as a fork from another project I worked on earlier called 'GhostSwap'."
+  },
   {
     "src": "image1.png",
-    "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "caption": "Light mode."
   },
-  { "src": "image2.png" },
-  { "src": "image3.png" },
-  { "src": "image4.png" },
-  { "src": "image4-2.png" },
-  { "src": "image5.png" },
-  { "src": "image6.png" },
-  { "src": "image7.png" },
-  { "src": "image8-1.png" },
-  { "src": "image8-2.png" },
-  { "src": "image9.png" },
-  { "src": "image10.png" },
-  { "src": "image10-vid.mp4" },
-  { "src": "image11-1.png" },
-  { "src": "image11-2.png" },
-  { "src": "image12.png" },
-  { "src": "image13.png" },
-  { "src": "image13-1.png" },
-  { "src": "image13-2.png" },
-  { "src": "image14.png" },
-  { "src": "image15.png" },
-  { "src": "image15-vid.mp4" },
-  { "src": "image15-vid-2.mp4" },
-  { "src": "image15-2.png" },
-  { "src": "image16.png" },
-  { "src": "image17.png" },
-  { "src": "image18.png" },
-  { "src": "image19.png" },
-  { "src": "image20.png" },
-  { "src": "image21.png" },
-  { "src": "image22.png" },
-  { "src": "image23.png" },
-  { "src": "image24.png" },
-  { "src": "image25.png" },
-  { "src": "image28.png" },
-  { "src": "image28-vid.mp4" },
-  { "src": "image28-vid-2.mp4" },
-  { "src": "image28-vid-3.mp4" },
-  { "src": "image29.png" },
-  { "src": "image30.png" },
-  { "src": "image31.png" },
-  { "src": "image32.png" }
+  {
+    "src": "image2.png",
+    "caption": "Testing responsive layout for mobile devices"
+  },
+  {
+    "src": "image3.png",
+    "caption": "Early page design for dyamic route to any token address"
+  },
+  { "src": "image4.png", "caption": "Mobile styles" },
+  {
+    "src": "image4-2.png",
+    "caption": "Added widget for buying and selling Tokens (right-hand side). Spend SUI to get tokens or sell off tokens to recieve SUI."
+  },
+  { "src": "image5.png", "caption": "Mobile Styles" },
+  {
+    "src": "image6.png",
+    "caption": "A route where users can create a token through the Atlantis frontend for a fee - with a widget for uploading a custom image from a device's file browser"
+  },
+  {
+    "src": "image7.png",
+    "caption": ""
+  },
+  {
+    "src": "image8-1.png",
+    "caption": "Updated Arena page with gradient background and section tabs"
+  },
+  { "src": "image8-2.png", "caption": "" },
+  { "src": "image9.png", "caption": "Added underwater themed banner" },
+  {
+    "src": "image10.png",
+    "caption": "Using css only to blend banner into page"
+  },
+  {
+    "src": "image10-vid.mp4",
+    "caption": "Early design of user profile page where you can look up some data and statitics about a user's trade history"
+  },
+  {
+    "src": "image11-1.png",
+    "caption": "Target page layout to copy from a site called Bullx.io"
+  },
+  { "src": "image11-2.png", "caption": "Results" },
+  {
+    "src": "image12.png",
+    "caption": "A dropdown menu for selecting which token indexes to include in the 'Pairs' table"
+  },
+  { "src": "image13.png", "caption": "The token trading component" },
+  {
+    "src": "image13-1.png",
+    "caption": "Added a sliding sidebar overlay component for displaying the logged in user's token portfolio. Also includes a settings tab for managing various trade options."
+  },
+  {
+    "src": "image13-2.png",
+    "caption": "A switch on the portfolio tab to view an editable list of watched tokens. Useful for keeping tabs on tokens which are not owned in your portfolio."
+  },
+  {
+    "src": "image14.png",
+    "caption": "The token swap route. Distinct from the widget used for buying/selling a token on the token page in that the swaps don't have to involve SUI token. You can directly swap one token for another without converting to SUI in between."
+  },
+  {
+    "src": "image15.png",
+    "caption": "The amount recieved is updated automatically whenever the input amount changes."
+  },
+  {
+    "src": "image15-vid.mp4",
+    "caption": "Adding some visual flair to the swap page using css animations to develop the 'TokenCloud' - design copied from app.uniswap.org/swap"
+  },
+  {
+    "src": "image15-vid-2.mp4",
+    "caption": "Finishing token cloud implementation by adding reveal animations and randomizing token placement using poisson disk sampling javascript package. Clicking one of the tokens in the cloud sets it as the desired output token."
+  },
+  { "src": "image15-2.png", "caption": "" },
+  {
+    "src": "image16.png",
+    "caption": "Test displaying a list of verified token contracts that will be available for selection in the swap modal by default."
+  },
+  {
+    "src": "image17.png",
+    "caption": "Rendering the tokens as a searchable list."
+  },
+  { "src": "image18.png", "caption": "Search results example." },
+  {
+    "src": "image19.png",
+    "caption": "Early page design for the dynamic 'Group' route."
+  },
+  {
+    "src": "image20.png",
+    "caption": "1/2: Updated Token route layout ripping design from photon-sol.tinyastro.io"
+  },
+  {
+    "src": "image21.png",
+    "caption": "2/2: Moblie layout and component wrapping"
+  },
+  {
+    "src": "image22.png",
+    "caption": "Cleaned up elements on right-hand side panel. Wrapped advanced settings into accordion dropdown menu."
+  },
+  {
+    "src": "image23.png",
+    "caption": "Displaying transaction history data fetched from backend."
+  },
+  {
+    "src": "image24.png",
+    "caption": "'My Holdings' tab showing currently logged in user's stats and data for this particluar token."
+  },
+  {
+    "src": "image25.png",
+    "caption": "A table of top traders ordered by Profits and Loss for this particular token."
+  },
+  {
+    "src": "image28.png",
+    "caption": "A route displaying a live list of new/high-performing tokens"
+  },
+  {
+    "src": "image28-vid.mp4",
+    "caption": "Testing many features together. Linking from token list to the dynamic token route. Working charts with live data, and a paginated table full of trade history"
+  },
+  {
+    "src": "image28-vid-2.mp4",
+    "caption": "Quickbuying tokens from directly from 'Memescope' route without having to go to a token's page. Portfolio balance and value is updated after successful transaction."
+  },
+  {
+    "src": "image28-vid-3.mp4",
+    "caption": "Quickbuying tokens using keyboard hotkeys - editable in settings tab of portfolio."
+  },
+  { "src": "image29.png", "caption": "" },
+  { "src": "image30.png", "caption": "" },
+  {
+    "src": "image31.png",
+    "caption": "Enabled Progressive Web App (PWA) features for Atlantis. Installs the application to your device as if it was an app from the app store."
+  },
+  {
+    "src": "image32.png",
+    "caption": "PWA install prompt with custom screenshots."
+  }
 ]

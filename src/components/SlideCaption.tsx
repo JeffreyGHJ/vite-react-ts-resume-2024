@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import { BsChatSquareText } from "react-icons/bs";
 import { Button } from "./ui/button";
 import { useEffect } from "react";
@@ -23,35 +22,34 @@ const SlideCaption = ({
         <div
           onClick={() => setShowCaptions(false)}
           id="caption-box"
-          className={cn(
-            "absolute group cursor-pointer flex-col bottom-0 w-full h-fit  flex-grow-1 flex items-center justify-end",
-            showCaptions ? "max-h-[30%]" : "max-h-10"
-          )}
+          className={
+            "absolute group cursor-pointer flex-col bottom-0 w-full h-fit flex-grow-1 flex items-center justify-center min-h-32 max-h-[37%]"
+          }
         >
           <div
             id="paragraph-bounds"
-            className="z-20 flex items-start justify-center w-full max-h-full px-10 py-5 pb-6 mt-2 mb-8 overflow-auto h-fit"
+            className="z-20 flex items-start justify-center w-full h-full max-h-full px-4 py-0 my-5 overflow-auto sm:px-8 md:px-10 "
           >
             <p
               id={`caption-${sectionName}-${index}`}
-              className="relative text-white h-fit"
+              className="relative text-sm text-white h-fit md:text-base"
             >
               {caption}
             </p>
-            <div className="absolute invisible text-base group-hover:visible text-primary/70 bottom-1 right-4">
-              click or tap to hide captions
+            <div className="absolute invisible text-xs font-thin group-hover:visible text-primary/70 bottom-1 right-2 md:right-4">
+              click to hide captions
             </div>
           </div>
           <div className="absolute w-full h-[100%]">
             <div
               id="gradient-end"
-              className="w-full h-6 -mt-6 flex-grow-1 bg-gradient-to-t from-black/85"
+              className="w-full h-6 -mt-4 flex-grow-1 bg-gradient-to-t from-black/85"
             ></div>
             <div
               id="gradient-transition"
               className="w-full h-[90%] flex-grow-1 bg-gradient-to-t from-black to-black/85"
             ></div>
-            <div id="gradient-bottom" className="w-full h-[95%] bg-black"></div>
+            <div id="gradient-bottom" className="w-full h-[55%] bg-black"></div>
           </div>
         </div>
       )}
