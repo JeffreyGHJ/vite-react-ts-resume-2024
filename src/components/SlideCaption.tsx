@@ -56,12 +56,12 @@ const SlideCaption = ({
         </div>
       )}
       {caption && !showCaptions && (
-        <div className="relative flex justify-end w-full h-0 -bottom-1 ">
+        <div className="relative flex justify-end w-full h-0">
           <Button
             title="Show captions"
             variant={"outline"}
             onClick={() => setShowCaptions(true)}
-            className="absolute px-2 bottom-1 right-2 w-fit h-fit group hover:bg-background hover:border-primary hover:text-white text-muted-2 animate-bounce duration-2000 hover:duration-0"
+            className="absolute px-2 shadow-md bottom-1 right-2 border-muted-2 w-fit h-fit text-primary/70 group hover:bg-background hover:border-primary hover:dark:text-white animate-bounce duration-2000 hover:duration-0"
           >
             <BsChatSquareText className="cursor-pointer pointer-events-auto duration-1500 size-8 animate-pulse group-hover:animate-none group-hover:duration-0" />
           </Button>
