@@ -81,15 +81,22 @@ const ExperienceSectionCarousel = ({
                     key={index}
                     className="flex flex-col items-center justify-center"
                   >
-                    <div className="relative select-none">
+                    <div className="relative h-full select-none">
                       {!isVideoFile(image.src) ? (
                         <img
                           src={`/slides/${sectionName}/${image?.src}`}
                           alt={`image-${index}`}
-                          className="object-contain"
+                          className="object-contain h-full"
                         />
                       ) : (
-                        <video playsInline autoPlay muted loop controls>
+                        <video
+                          playsInline
+                          autoPlay
+                          muted
+                          loop
+                          controls
+                          className="object-contain h-full"
+                        >
                           <source
                             src={`/slides/${sectionName}/${image?.src}`}
                             type="video/mp4"
