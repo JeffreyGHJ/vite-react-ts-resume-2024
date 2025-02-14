@@ -30,7 +30,7 @@ const SlideCaption = ({
         >
           <div
             id="paragraph-bounds"
-            className="z-20 flex items-start justify-center w-full max-h-full px-10 py-5 pb-6 mt-2 mb-8 overflow-auto text-xl h-fit"
+            className="z-20 flex items-start justify-center w-full max-h-full px-10 py-5 pb-6 mt-2 mb-8 overflow-auto h-fit"
           >
             <p
               id={`caption-${sectionName}-${index}`}
@@ -56,13 +56,14 @@ const SlideCaption = ({
         </div>
       )}
       {caption && !showCaptions && (
-        <div className="absolute bottom-0 flex justify-end w-full p-2 h-fit animate-bounce duration-2000">
+        <div className="absolute flex justify-end w-full p-2 -bottom-1 h-fit animate-bounce duration-2000">
           <Button
+            title="Show captions"
             variant={"outline"}
             onClick={() => setShowCaptions(true)}
-            className="p-2 cursor-pointer hover:bg-background h-fit text-muted-2"
+            className="p-2 cursor-pointer group hover:bg-background hover:border-primary hover:text-white h-fit text-muted-2"
           >
-            <BsChatSquareText className="duration-1000 size-8 animate-pulse" />
+            <BsChatSquareText className="duration-1500 size-6 animate-pulse group-hover:animate-none group-hover:duration-0" />
           </Button>
         </div>
       )}

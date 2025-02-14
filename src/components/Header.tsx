@@ -20,7 +20,7 @@ const Header = () => {
     <div className="relative flex flex-col items-center justify-center w-full h-96 ">
       <ParticleCanvas />
       <div className="">
-        <div className="text-5xl font-thin leading-[1] text-center sm:text-6xl">
+        <div className="text-5xl font-thin leading-[1] text-center sm:text-6xl z-[99999] relative pointer-events-none">
           Jeffrey Hernandez
         </div>
         <div className="relative m-auto my-4 w-fit h-fit">
@@ -38,7 +38,7 @@ const Header = () => {
         </div>
 
         <div className="flex items-center justify-center gap-2 mt-4 transition-all">
-          <div className=" h-7 flex items-center font-semibold text-center z-[90] relative border rounded-full w-fit gap-2 pl-4 pr-3">
+          <div className=" h-7 flex items-center font-semibold text-center z-[90] relative border rounded-full w-fit gap-2 pl-4 pr-3 bg-background/80">
             Jeffreyghj@gmail.com
             <Button
               variant={"ghost"}

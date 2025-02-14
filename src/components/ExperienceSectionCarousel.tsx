@@ -132,7 +132,7 @@ const ExperienceSectionCarousel = ({
             scrollCarouselToCenter();
           }}
           variant={"ghost"}
-          className="text-lg text-primary/70 dark:text-muted-foreground/70"
+          className="w-full text-lg text-primary/70 hover:dark:text-primary dark:text-muted-foreground/70"
         >
           View Slideshow
           <ImageIcon className="size-5" />

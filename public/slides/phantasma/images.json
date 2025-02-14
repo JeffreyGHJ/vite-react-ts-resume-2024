@@ -18,7 +18,9 @@
   { "src": "image5-vid.mp4" },
   { "src": "image6-vid.mp4" },
   { "src": "image7.png" },
-  { "src": "image7-vid.mp4" },
+  {
+    "src": "image7-vid.mp4"
+  },
   { "src": "image8.png" },
   { "src": "image8-vid.mp4" },
   { "src": "image9-vid.mp4" },
@@ -30,7 +32,10 @@
   { "src": "image14.png" },
   { "src": "image15-vid.mp4" },
   { "src": "image16-vid.mp4" },
-  { "src": "image17-vid.mp4" },
+  {
+    "src": "image17-vid.mp4",
+    "caption": "A couple of details you can see here: <ol type='1'> <li>The context menu tries to open itself horizontally centered at the spot that you right click </li><li>If you try to open the menu too close to the edge of the screen, instead of being horizontally centered at the click position, the menu will shift itself as much as needed so that none of the menu hangs off the screen </li><li>The space around the menu (bordered in green) acts as an exit trigger for the menu. When your cursor exits the green border the menu will hide</li> </ol>"
+  },
   { "src": "image18.png" },
   { "src": "image18-vid.mp4" },
   { "src": "image19-vid.mp4" },
