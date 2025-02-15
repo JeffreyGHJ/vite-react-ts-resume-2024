@@ -1,48 +1,145 @@
 [
-  { "src": "image0-vid.mp4" },
-  { "src": "image1.png" },
-  { "src": "image1-1.png" },
-  { "src": "image1-1-vid.mp4" },
-  { "src": "image2-vid.mp4" },
-  { "src": "image3.png" },
-  { "src": "image3-1.png" },
-  { "src": "image3-3.png" },
-  { "src": "image3-3-vid.mp4" },
-  { "src": "image4.png" },
-  { "src": "image4-1.png" },
-  { "src": "image4-2.png" },
-  { "src": "image4-2-vid.mp4" },
-  { "src": "image4-3.png" },
-  { "src": "image5.png" },
-  { "src": "image5-1.png" },
-  { "src": "image5-vid.mp4" },
-  { "src": "image6-vid.mp4" },
-  { "src": "image7.png" },
   {
-    "src": "image7-vid.mp4"
+    "src": "image0-vid.mp4",
+    "caption": "Phantasma is a game that had started well before I jumped in on development. Starting from this point the features I added that you can see here are the World Map overlay and the blue particles that appear when the player sprints/dashes. The map visibility is being toggled by the 'M' key."
   },
-  { "src": "image8.png" },
-  { "src": "image8-vid.mp4" },
-  { "src": "image9-vid.mp4" },
-  { "src": "image9.png" },
-  { "src": "image10-vid.mp4" },
-  { "src": "image11.png" },
-  { "src": "image12.png" },
-  { "src": "image13.png" },
-  { "src": "image14.png" },
-  { "src": "image15-vid.mp4" },
-  { "src": "image16-vid.mp4" },
+  {
+    "src": "image1.png",
+    "caption": "Added a minimap view of the players current location to the top right of the HUD UI."
+  },
+  { "src": "image1-1.png", "caption": "A square variant of the minimap." },
+  {
+    "src": "image1-1-vid.mp4",
+    "caption": "The minimap cursor updates in real time to according to the player's position and rotation in the world."
+  },
+  {
+    "src": "image2-vid.mp4",
+    "caption": "Extended the minimap widget blueprint to allow it to be dragged anywhere on screen. The map itself can be dragged/panned anywhere within the widget. Placing the cursor over a point on the map and scrolling allows the map to be zoomed in/out but not the game camera. Conversely, placing the cursor outside of the map widget and scrolling allows the camera to be zoomed but not the map. The minimap has similar functionality but cannot be dragged/panned like the world map."
+  },
+  {
+    "src": "image3.png",
+    "caption": "Added a hud element to represent the player's bank inventory. Inventory widgets are a grid of slots/squares where items can be placed."
+  },
+  {
+    "src": "image3-1.png",
+    "caption": "Test displaying multiple items from the bank inventory array"
+  },
+  {
+    "src": "image3-3.png",
+    "caption": "Added a backpack inventory. Bank has items stacked in it, while backpack will not allow some items to be stacked in inventory slots."
+  },
+  {
+    "src": "image3-3-vid.mp4",
+    "caption": "Testing drag and drop inventory interactions. Dragging item stacks within the same inventory swaps their positions. Dragging items from backpack into bank adds that item to a corresponding stack in the bank. Moving items from bank to backpack unstacks the items and places singles into open backpack slots. The bank includes an amount slider to increase the number of items moved per click."
+  },
+  {
+    "src": "image4.png",
+    "caption": "Added a noted variant of items which allows them to be stackable in backpack slots but not usable."
+  },
+  { "src": "image4-1.png", "caption": "Noted variant examples" },
+  {
+    "src": "image4-2.png",
+    "caption": "Testing item slot placement, allowing empty slots between items in the underlying array representation. The data design for the actual array of items is optimized and does not require an entry to represent the empty slots. So if an inventory grid has 1000 slots and you put an item in the first and last slot, the item array will only need to save 2 elements rather than saving an array with 998 null elements."
+  },
+  {
+    "src": "image4-2-vid.mp4",
+    "caption": "Added buttons in the bank to empty backpack and for switching to noted item withdraw mode."
+  },
+  {
+    "src": "image4-3.png",
+    "caption": "A portion of my blueprint that handles the logic for dragging and dropping items between all the various inventory types and item stacking interactions."
+  },
+  {
+    "src": "image5.png",
+    "caption": "Implemented rewarding item drops into player inventory while gathering (fishing)"
+  },
+  {
+    "src": "image5-1.png",
+    "caption": "Implemented randomized drop rewards with increasing rarity based on player's relevant gathering level"
+  },
+  {
+    "src": "image5-vid.mp4",
+    "caption": "Prototype loot drop orb implementation with the new loot inventory widget placed on the HUD. The loot orbs have UI elements for interaction and interacting with one will populate the player's loot widget slots so they can be taken into the backpack if empty slots or stack spaces are available. The contents of the loot drop are randomized"
+  },
+  {
+    "src": "image6-vid.mp4",
+    "caption": "Updated design of loot orb particles."
+  },
+  { "src": "image7.png", "caption": "" },
+  {
+    "src": "image7-vid.mp4",
+    "caption": "Added variations in loot orb colors to represent different rarity levels. Increases in rarity from left to right."
+  },
+  {
+    "src": "image8.png",
+    "caption": "Close button to hide widget visiblity on HUD"
+  },
+  {
+    "src": "image8-vid.mp4",
+    "caption": "Full test of loot drops from killing mobs. Drops are randomized and loot orb rarity color is determined by rarity of loot generated within."
+  },
+  {
+    "src": "image9-vid.mp4",
+    "caption": "Demo of my custom build widget functionality. These are the Bank, Backpack, and Loot widgets which all inherit from the same base widget class called 'DraggableResizableWidget'. I made the class configuarble so you can decide if the widget is draggable, resizeable, has a close button, a visible header, etc..."
+  },
+  {
+    "src": "image9.png",
+    "caption": "My DraggableResizableWidget configuration options."
+  },
+  {
+    "src": "image10-vid.mp4",
+    "caption": "Various ways to close the Loot widget. Click outside, click the close button, press esc, press interact (again), or empty out the loot. Loot orb cleans itself up and gracefully disappears when empty."
+  },
+  {
+    "src": "image11.png",
+    "caption": "Forced loot orbs to merge contents together and merge into a single loot orb depending on a configureable distance from eachother. So if loot orbs drop too close together they can be combined to help reduce performance costs associated with rendering many loot orbs. Also improves QoL for looting many items dropped close together."
+  },
+  { "src": "image12.png", "caption": "Increased merge radius." },
+  { "src": "image13.png", "caption": "Increased merge radius more." },
+  {
+    "src": "image14.png",
+    "caption": "Increased merge radius - all orbs forced to merge into a single loot orb."
+  },
+  {
+    "src": "image15-vid.mp4",
+    "caption": "Verifying loot merging by dropping as many pieces of wood as fast as possible. Results in loot orbs spaced out at the edges of eachothers merge boundaries - number of total orbs is much less than pieces of wood dropped."
+  },
+  {
+    "src": "image16-vid.mp4",
+    "caption": "Increased merge radius causes orbs to be more spaced out/less tightly packed."
+  },
   {
     "src": "image17-vid.mp4",
     "caption": "A couple of details you can see here: <ol type='1'> <li>The context menu tries to open itself horizontally centered at the spot that you right click </li><li>If you try to open the menu too close to the edge of the screen, instead of being horizontally centered at the click position, the menu will shift itself as much as needed so that none of the menu hangs off the screen </li><li>The space around the menu (bordered in green) acts as an exit trigger for the menu. When your cursor exits the green border the menu will hide</li> </ol>"
   },
-  { "src": "image18.png" },
-  { "src": "image18-vid.mp4" },
-  { "src": "image19-vid.mp4" },
-  { "src": "image20.png" },
-  { "src": "image21.png" },
-  { "src": "image21-vid.mp4" },
-  { "src": "image22-vid.mp4" },
-  { "src": "image23-vid.mp4" },
-  { "src": "image24-vid.mp4" }
+  {
+    "src": "image18.png",
+    "caption": "Referenced context menu from Old School Runescape."
+  },
+  {
+    "src": "image18-vid.mp4",
+    "caption": "Ensuring that context menu is always contained within the game window and that window scale does not interfere with context menu appearance/functionality."
+  },
+  {
+    "src": "image19-vid.mp4",
+    "caption": "Using context menu to interact with inventory items."
+  },
+  {
+    "src": "image20.png",
+    "caption": "Created widget for skills menu where player can spend earned skill points to increase levels."
+  },
+  { "src": "image21.png", "caption": "" },
+  { "src": "image21-vid.mp4", "caption": "" },
+  {
+    "src": "image22-vid.mp4",
+    "caption": "Created widget for crafting items. Includes skill level requirements, xp rewards, and requires recipe items to be in the player's backpack."
+  },
+  {
+    "src": "image23-vid.mp4",
+    "caption": "Similarly created cooking station and cooking UI menu."
+  },
+  {
+    "src": "image24-vid.mp4",
+    "caption": "Similarly created forging station and forging UI menu."
+  }
 ]
