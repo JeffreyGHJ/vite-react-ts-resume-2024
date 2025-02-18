@@ -44,6 +44,10 @@
     "caption": "Early design of user profile page where you can look up some data and statitics about a user's trade history"
   },
   {
+    "src": "image10-1-vid.mp4",
+    "caption": "User profile page with support for updating avatar, banner, name and bio."
+  },
+  {
     "src": "image11-1.png",
     "caption": "Target page layout to copy from a site called Bullx.io"
   },
@@ -91,6 +95,7 @@
     "src": "image19.png",
     "caption": "Early page design for the dynamic 'Group' route."
   },
+
   {
     "src": "image20.png",
     "caption": "1/2: Updated Token route layout ripping design from photon-sol.tinyastro.io"

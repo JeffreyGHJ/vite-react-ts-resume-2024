@@ -1,24 +1,85 @@
 [
-  { "src": "image0.png" },
-  { "src": "image1.png" },
-  { "src": "image2.png" },
-  { "src": "image3.png" },
-  { "src": "image4-1.png" },
-  { "src": "image4-2.png" },
-  { "src": "image4-3.png" },
-  { "src": "image4.png" },
-  { "src": "image5.png" },
-  { "src": "image6.png" },
-  { "src": "image7.png" },
-  { "src": "image8.gif" },
-  { "src": "image9.png" },
-  { "src": "image10.png" },
-  { "src": "image11.png" },
-  { "src": "image12.png" },
-  { "src": "image13.png" },
-  { "src": "image14.png" },
-  { "src": "image15.png" },
-  { "src": "image16.png" },
-  { "src": "image17.png" },
-  { "src": "image18.png" }
+  {
+    "src": "image0.png",
+    "caption": "This was how the main market tab for the site looked before I was tasked to update the styles."
+  },
+
+  {
+    "src": "image1-vid.mp4",
+    "caption": "Updated colors and added a prototype 'Shop' tab."
+  },
+  {
+    "src": "image1-1-vid.mp4",
+    "caption": "Updated card styles to better show off the collection art and reduce amount of dead space in the grid. "
+  },
+  {
+    "src": "image1.png",
+    "caption": "Replaced 'Vault' tab with 'Community' tab, and added a 'Knowledge' tab."
+  },
+  {
+    "src": "image2.png",
+    "caption": "Extended the user's inventory tabs to include a new collection called 'SoulEaters' by reading contents of user's wallets on chain."
+  },
+  {
+    "src": "image3.png",
+    "caption": "Implementing a switch (top-right) to change display mode of NFT cards to include attribute info."
+  },
+  {
+    "src": "image4-1.png",
+    "caption": "Created a route to view a live page of minted SoulEater NFTs that are sorted according to their rarity. This required the use of a ranking algorithm that was written in Python which I embedded into our node backend server. This list and its ranks are updated whenever a new SoulEater is minted."
+  },
+  {
+    "src": "image4.png",
+    "caption": "Connecting the NTF attributes to filter controls and testing the results."
+  },
+  {
+    "src": "image4-2.png",
+    "caption": "Cleaning the underlying metadata used for ranking the SoulEaters. This is the new result of running the ranking algorithm against the cleaned attribute data."
+  },
+  {
+    "src": "image4-3.png",
+    "caption": "The data before and after. Before fixing the data, the body color, face color, and face type were all combined together into one attribute called 'Body' which was not intended."
+  },
+
+  {
+    "src": "image5.png",
+    "caption": "The 'Ecto' tab of the 'Knowledge' route that I added earlier."
+  },
+  {
+    "src": "image6.png",
+    "caption": "Successfully fixed a Captcha issue which was plaguing the account update section."
+  },
+  {
+    "src": "image7.png",
+    "caption": "Added an account registration route for onboarding users onto the platform. This simultaneously creates an account for this website, an account for the MMO Phantasma, and a unique/secure Web3 EVM wallet that can be used to recieve and hold in-game items for Phantasma in the form of compressed Solana NFTs (accessible from the inventory tab of this website)."
+  },
+  {
+    "src": "image8.gif",
+    "caption": "Example of secure vault generation step of user onboarding."
+  },
+  {
+    "src": "image9.png",
+    "caption": "Whenver a user creates a Web3 vault they must save a randomly generated password in order to recover access to the vault on any other device. This step of the registration ensures that the user indeed saves the password and uderstands their responsibility in the process."
+  },
+  { "src": "image10.png", "caption": "Success!" },
+  {
+    "src": "image11.png",
+    "caption": "Target design for shop interface from the game 'PUBG'."
+  },
+  { "src": "image12.png", "caption": "Results." },
+  {
+    "src": "image13.png",
+    "caption": "The modal for purchasing items which includes a dropdown for selecting currency type and an input for amount to buy."
+  },
+  { "src": "image14.png", "caption": "Target design for shop interface pt.2" },
+  { "src": "image15.png", "caption": "Results." },
+  { "src": "image16.png", "caption": "Smaller width." },
+  {
+    "src": "image17.png",
+    "caption": "When width is small enough the tabs and filters are hidden so that more items can be viewed."
+  },
+  {
+    "src": "image18.png",
+    "caption": "Filters display as an sliding overlay when opened on small width."
+  }
 ]

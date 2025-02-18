@@ -1,66 +1,200 @@
 [
-  { "src": "image0-1.png" },
-  { "src": "image0-2.png" },
-  { "src": "image0-3.png" },
-  { "src": "image1.png" },
-  { "src": "image2-1.gif" },
-  { "src": "image2-2.png" },
-  { "src": "image2-3.png" },
-  { "src": "image2.png" },
-  { "src": "image4.png" },
-  { "src": "image4-2.png" },
-  { "src": "image5.png" },
-  { "src": "image6.png" },
-  { "src": "image11.png" },
-  { "src": "image12.png" },
-  { "src": "image14.gif" },
-  { "src": "image15.png" },
-  { "src": "image16.gif" },
-  { "src": "image17.png" },
-  { "src": "image18.png" },
-  { "src": "image19.jpg" },
-  { "src": "image20.png" },
-  { "src": "image23.png" },
-  { "src": "image24.png" },
-  { "src": "image25.png" },
-  { "src": "image26.png" },
-  { "src": "image27.png" },
-  { "src": "image28.png" },
-  { "src": "image30.png" },
-  { "src": "image32.png" },
-  { "src": "image33.png" },
-  { "src": "image34.png" },
-  { "src": "image35.png" },
-  { "src": "image36.png" },
-  { "src": "image37.png" },
-  { "src": "image38.png" },
-  { "src": "image39.png" },
-  { "src": "image40.png" },
-  { "src": "image50.png" },
-  { "src": "image51.png" },
-  { "src": "image52.png" },
-  { "src": "image53.png" },
-  { "src": "image54.png" },
-  { "src": "image55.png" },
-  { "src": "image56.png" },
-  { "src": "image57.png" },
-  { "src": "image58.gif" },
-  { "src": "image59.gif" },
-  { "src": "image63.png" },
-  { "src": "image64.gif" },
-  { "src": "image65.png" },
-  { "src": "image66.png" },
-  { "src": "image67.png" },
-  { "src": "image42.png" },
-  { "src": "image41.png" },
-  { "src": "image43.png" },
-  { "src": "image44.png" },
-  { "src": "image45.png" },
-  { "src": "image46.png" },
-  { "src": "image47.png" },
-  { "src": "image48.png" },
-  { "src": "image49.png" },
-  { "src": "image68.png" },
-  { "src": "image69.gif" },
-  { "src": "image70.png" }
+  {
+    "src": "image0-1.png",
+    "caption": "I was tasked with building out the UI for an NFT Automated Market Maker (AMM) - A system for trading NFTs wholesale at automatically adjusted price points. These were my contributions starting with the dynamic route for any arbitrary collection. Each collection should have a banner image in its metadata wich will be displayed here, with its address in the gray bar below."
+  },
+  {
+    "src": "image0-2.png",
+    "caption": "Creating empty card components and aligning them in a flex box layout."
+  },
+  {
+    "src": "image0-3.png",
+    "caption": "Developing the internal card elements with the use of some temporary dummy data."
+  },
+  {
+    "src": "image1.png",
+    "caption": "Target interface design from a site called 'Sudoswap'."
+  },
+  { "src": "image2-3.png", "caption": "Results" },
+  {
+    "src": "image2-1.gif",
+    "caption": "Added some loading state and CSS animations."
+  },
+  {
+    "src": "image2-2.png",
+    "caption": "Added a shopping cart sidebar and updated page styles to be responsive to different widths. When width is small enough, the shopping cart changes from a sidebar to a bottom-oriented drawer."
+  },
+
+  {
+    "src": "image2.png",
+    "caption": "Adding ranks specifically for our LittleGhosts collection."
+  },
+
+  {
+    "src": "image4.png",
+    "caption": "A trending page so that more collections can be discovered and traded."
+  },
+  { "src": "image4-2.png", "caption": "Top 3 ranks have emoji medals" },
+  {
+    "src": "image5.png",
+    "caption": "An example of users listing NFTs on our AMM from a collection other than our own."
+  },
+  {
+    "src": "image6.png",
+    "caption": "Example results from searchbar on the trending collections page."
+  },
+  {
+    "src": "image11.png",
+    "caption": "Implementing the 'Pools' tab for the collection page with cards containing useful pricing and liquidity information about each existing pool for the collection."
+  },
+  { "src": "image12.png", "caption": "Functioning Pool filters." },
+  {
+    "src": "image14.gif",
+    "caption": "Built UI and developed algorithm for 'Sweep Mode' which adds as many NFTs as possible to your cart given an input price. Sweep mode will pick trades at all the lowest price points available so you can try to get the most NFTs possible for the least amount of money - bulk purchasing the cheapest listed items of a collection is referred to as 'Sweeping' because you are buying at the market's current bottom price aka the 'floor'."
+  },
+  {
+    "src": "image15.png",
+    "caption": "A bulk collection offer modal which actually creates an automated pool with a currency balance that other users can sell NFTs to until the pool has no currency left. On the left is my implementation and on the right is the target UI that I was recreating from 'Sudoswap'. Sudoswap's modal invalidates the inputs for this trade but this is an error, based on the math below, my modal on the left accepts this as a valid offer which is correct."
+  },
+  {
+    "src": "image16.gif",
+    "caption": "Another issue with Sudoswap's modal was the underlying algorithm that calculated the amount of NFTs that could be purchased based on input values. The algorithm crashes the page javascript when the input length is around 9 to 10 digits long."
+  },
+  {
+    "src": "image17.png",
+    "caption": "My imelmentation allowed for far greater inputs and was many times faster as a result. Even with such a large input here, the page did not crash."
+  },
+  {
+    "src": "image18.png",
+    "caption": "Staking UI ripped from an open source project called CardinalUI"
+  },
+  { "src": "image19.jpg", "caption": "" },
+  { "src": "image20.png", "caption": "" },
+  {
+    "src": "image23.png",
+    "caption": "Replicating the UI from Sudoswap for the process of creating a pool."
+  },
+  {
+    "src": "image24.png",
+    "caption": "A component for selecting which of your owned NFTs you want to deposit in a pool that will automatically sell NFTs to buyers."
+  },
+  {
+    "src": "image25.png",
+    "caption": "Example steps to purchase NFT from pools: go to the collection market page, click on the pools tab or use the tooltip link to route to the pool UI. When on the Pool page click 'Direct Pool Swap' and from there select the items you want to buy/sell."
+  },
+  {
+    "src": "image26.png",
+    "caption": "Creating a trade history list displayed on a Pool's route. Each entry can be expanded to see more in-depth information."
+  },
+  {
+    "src": "image27.png",
+    "caption": "A chart overview of swaps made within a pool showing spot price and timestamp of each trade."
+  },
+  {
+    "src": "image28.png",
+    "caption": "More information visible on the pool page."
+  },
+  {
+    "src": "image30.png",
+    "caption": "Creating a similar chart as the one for an individual Pool, but this time for ALL pools of an NFT collection. This chart will include points that show when new pools have been created."
+  },
+  {
+    "src": "image32.png",
+    "caption": "Stylizing the chart history entries (mobile width)"
+  },
+  { "src": "image33.png", "caption": "More chart entries (desktop width)" },
+  { "src": "image52.png", "caption": "" },
+  {
+    "src": "image34.png",
+    "caption": "Mapping attributes of all NFTs for sale in a collection in order to create filters."
+  },
+  {
+    "src": "image35.png",
+    "caption": "An example of the trait data representing some NFTs"
+  },
+  { "src": "image36.png", "caption": "Building the filter components." },
+  { "src": "image37.png", "caption": "Building the filter components." },
+  {
+    "src": "image38.png",
+    "caption": "Example of multiple filters selected and displaying properly filtered results."
+  },
+  {
+    "src": "image39.png",
+    "caption": "An example of when filters yeild no matches. Also added a button for clearing filters."
+  },
+  {
+    "src": "image40.png",
+    "caption": "Better looking button for clearing filters."
+  },
+  {
+    "src": "image50.png",
+    "caption": "Broken page layout for mobile devices..."
+  },
+  { "src": "image51.png", "caption": "Fixed!" },
+  {
+    "src": "image53.png",
+    "caption": "A button for selecting or unselecting all collections at once. (user inventory page)"
+  },
+  {
+    "src": "image54.png",
+    "caption": "Added controls to pool charts so that you can hide points when pools were created to focus on buy/sell prices. Also a control to change how many past trades are currently visible in the chart."
+  },
+  { "src": "image55.png", "caption": "" },
+  { "src": "image56.png", "caption": "" },
+  { "src": "image57.png", "caption": "" },
+  {
+    "src": "image58.gif",
+    "caption": "Added switch in header to allow user to change networks/chains on the fly."
+  },
+  {
+    "src": "image59.gif",
+    "caption": "Styling the network switch to save space in the header when width is small."
+  },
+  {
+    "src": "image63.png",
+    "caption": "Updating Web3 package to WalletConnectV2 after V1 was sunset. Necessary for mobile users to be able to connect wallets to the application and make trades."
+  },
+  {
+    "src": "image64.gif",
+    "caption": "Integrating the new WalletConnectV2 components into the header switch."
+  },
+  { "src": "image65.png", "caption": "Updating the connection modal's style" },
+  {
+    "src": "image66.png",
+    "caption": "Adding more network options with connection status indicators."
+  },
+  {
+    "src": "image67.png",
+    "caption": "Putting the network switch into the new connection modal."
+  },
+  {
+    "src": "image42.png",
+    "caption": "Target UI from MagicEden.io - Creating a 'Launchpad' page where new NTF collections can be minted for a fee."
+  },
+  { "src": "image41.png", "caption": "Recreating target UI..." },
+  {
+    "src": "image43.png",
+    "caption": "Adding mint type options with countdown timers."
+  },
+  { "src": "image44.png", "caption": "Adding section for project info." },
+  { "src": "image45.png", "caption": "Tooltips!" },
+  { "src": "image46.png", "caption": "Mobile layout." },
+  {
+    "src": "image47.png",
+    "caption": "Changed accent colors to a shade of blue."
+  },
+  {
+    "src": "image48.png",
+    "caption": "Adding some charts to display pools planned for reserves."
+  },
+  { "src": "image49.png", "caption": "Final results." },
+  {
+    "src": "image68.png",
+    "caption": "Adding modal for 'Burn-to-mint' mode. We initially launched our SoulEaters collection with a burn-to-mint stage for the first 500 SoulEaters. In order to mint 1 SoulEater, user's had to burn, or permanently destroy 2 LittleGhost NFTs. As a tradeoff, SoulEaters minted via burns are specially 'Enhanced' NFTs."
+  },
+  { "src": "image69.gif", "caption": "Example of burn-to-mint process." },
+  {
+    "src": "image70.png",
+    "caption": "Our community quickly minted all 500 enhanced SoulEaters! RIP to 1000 LittleGhosts that are gone forever...or are they?"
+  }
 ]
