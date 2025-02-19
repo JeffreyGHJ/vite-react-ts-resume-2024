@@ -107,3 +107,7 @@
     @apply list-[auto] list-inside;
   }
 }
+
+@theme inline {
+  --radius-inherit: inherit;
+}

@@ -6,6 +6,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import AppFooter from "@/components/AppFooter";
 import ResumeDownload from "@/components/ResumeDownload";
 import Header from "@/components/Header";
+import GlowArea from "@/components/GlowArea";
 
 function Home() {
   // Useful debug
@@ -13,15 +14,17 @@ function Home() {
   // console.log(bodyStyles.getPropertyValue("--primary"));
 
   return (
-    <div className="transition-all duration-1000 max-w-[100vw] overflow-x-hidden">
+    <div className="max-w-[100vw] overflow-x-hidden transition-colors duration-500">
       <Header />
       <ThemeSwitcher />
-      <ResumeDownload />
-      <ExperienceSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <EducationSection />
-      <AppFooter />
+      <GlowArea>
+        <ResumeDownload />
+        <ExperienceSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <EducationSection />
+        <AppFooter />
+      </GlowArea>
     </div>
   );
 }
