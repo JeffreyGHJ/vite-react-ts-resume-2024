@@ -2,8 +2,8 @@ import Experience from "@/lib/constants/Experience";
 import SectionHeading from "./SectionHeading";
 import ExperienceSectionCarousel from "./ExperienceSectionCarousel";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 import Glow from "./Glow";
+import { useEffect, useState } from "react";
 
 const ExperienceSection = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -11,18 +11,21 @@ const ExperienceSection = () => {
   useEffect(() => {
     setExpandedCard(null);
   }, []);
-
   return (
     <div
       className={cn(
-        "m-auto",
-        expandedCard === null ? "max-w-5xl" : "w-[calc(100vw-2.5rem)]"
+        "m-auto max-w-5xl"
+        // expandedCard === null ? "max-w-5xl" : "max-w-5xl"
       )}
     >
       <SectionHeading>Work Experience</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 sm:p-0 leading-[1.4] tracking-tight">
         {[...Experience].reverse().map((experience, index) => (
-          <Glow key={index} className="flex rounded-lg">
+          <Glow
+            key={index}
+            disabled={expandedCard === index}
+            className="flex rounded-lg"
+          >
             <div
               id={experience.sectionName}
               className={cn(

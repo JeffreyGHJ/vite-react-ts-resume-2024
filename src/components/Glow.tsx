@@ -5,11 +5,13 @@ import { useEffect, useRef, useState } from "react";
 
 const lightModeGradientColor = "rgba(0, 0, 0, 0.6)";
 const darkModeGradientColor = "rgba(255, 255, 255, 0.3)";
+const transparent = "rgba(0, 0, 0, 0.6)";
 
 const Glow = ({
   color = lightModeGradientColor,
   className,
   children,
+  disabled = false,
   ...rest
 }: any) => {
   const isDark = useDarkMode();
@@ -18,10 +20,14 @@ const Glow = ({
   const windowWidth = useWindowWidth();
 
   useEffect(() => {
+    if (disabled) return setGradientColor(transparent);
+
     return isDark
       ? setGradientColor(darkModeGradientColor)
       : setGradientColor(lightModeGradientColor);
-  }, [isDark]);
+  }, [isDark, disabled]);
+
+  // TO-DO recalculate offesets when expanded card changes
 
   // update offsets if window width changes
   useEffect(() => {

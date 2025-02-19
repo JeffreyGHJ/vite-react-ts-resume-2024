@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 import { CSSProperties, useEffect, useRef } from "react";
 
 const GlowArea = ({ className, size = 300, children }: any) => {
-  const element = useRef<HTMLDivElement | null>(null);
   // we useRef instead of useState because we dont want the updating of x/y to cause rerender
   // mouse will move often and that would be too many renders.
   const mousePosition = useRef<{ x: number; y: number } | null>(null);
+  const element = useRef<HTMLDivElement | null>(null);
   const frameId = useRef<number | null>(null);
 
   const updateGlow = () => {
