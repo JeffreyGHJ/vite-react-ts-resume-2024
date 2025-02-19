@@ -14,7 +14,7 @@ const Skill = ({ index, skill, updateGlow }: any) => {
   };
 
   return (
-    <Glow recalculateBounds={updateGlow} className="rounded-xl">
+    <Glow recalculateBounds={updateGlow} className="rounded-lg">
       <div
         tabIndex={index}
         className="relative"
