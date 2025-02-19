@@ -22,10 +22,9 @@ const ExperienceSection = () => {
       <SectionHeading>Work Experience</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 sm:p-0 leading-[1.4] tracking-tight">
         {[...Experience].reverse().map((experience, index) => (
-          <Glow className="flex rounded-lg">
+          <Glow key={index} className="flex rounded-lg">
             <div
               id={experience.sectionName}
-              key={index}
               className={cn(
                 "flex flex-col items-center rounded-lg border-[1px] border-muted-foreground shadow-lg p-1 sm:p-3",
                 expandedCard === index ? "w-[100vw]" : "w-80 sm:w-96"

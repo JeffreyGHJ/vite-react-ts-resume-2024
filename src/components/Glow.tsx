@@ -1,9 +1,10 @@
 import useDarkMode from "@/lib/hooks/useDarkMode";
+import useWindowWidth from "@/lib/hooks/useWindowWidth";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
-const lightModeGradientColor = "rgba(255, 255, 255, 0.3)";
-const darkModeGradientColor = "rgba(0, 0, 0, 0.6)";
+const lightModeGradientColor = "rgba(0, 0, 0, 0.6)";
+const darkModeGradientColor = "rgba(255, 255, 255, 0.3)";
 
 const Glow = ({
   color = lightModeGradientColor,
@@ -14,23 +15,7 @@ const Glow = ({
   const isDark = useDarkMode();
   const [gradientColor, setGradientColor] = useState(color);
   const element = useRef<HTMLDivElement | null>(null);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  // listen for window resize, update element offsets whenever window size changes
-  useEffect(() => {
-    // Define the handler function for window resize
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // Attach the resize event listener
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const windowWidth = useWindowWidth();
 
   useEffect(() => {
     return isDark
@@ -38,6 +23,7 @@ const Glow = ({
       : setGradientColor(lightModeGradientColor);
   }, [isDark]);
 
+  // update offsets if window width changes
   useEffect(() => {
     element.current?.style.setProperty(
       "--glow-top",

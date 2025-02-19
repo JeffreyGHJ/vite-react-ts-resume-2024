@@ -32,6 +32,11 @@ const useDarkMode = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const isDarkMode = document.documentElement.classList.contains("dark");
+    setIsDark(isDarkMode);
+  }, []);
+
   return isDark;
 };
 

@@ -8,11 +8,8 @@ const ProjectsSection = () => {
       <SectionHeading>Personal Projects</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 tracking-tight leading-[1.4] sm:p-0">
         {Projects.map((project, index) => (
-          <Glow className="flex rounded-lg">
-            <div
-              key={index}
-              className="flex flex-col p-3 border rounded-lg shadow-lg border-muted-foreground w-80 sm:w-96"
-            >
+          <Glow key={index} className="flex rounded-lg">
+            <div className="flex flex-col p-3 border rounded-lg shadow-lg border-muted-foreground w-80 sm:w-96">
               {project.site_url ? (
                 <a
                   href={project.site_url}
