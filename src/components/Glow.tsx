@@ -12,6 +12,7 @@ const Glow = ({
   className,
   children,
   disabled = false,
+  recalculateBounds = false,
   ...rest
 }: any) => {
   const isDark = useDarkMode();
@@ -27,8 +28,6 @@ const Glow = ({
       : setGradientColor(lightModeGradientColor);
   }, [isDark, disabled]);
 
-  // TO-DO recalculate offesets when expanded card changes
-
   // update offsets if window width changes
   useEffect(() => {
     element.current?.style.setProperty(
@@ -40,6 +39,20 @@ const Glow = ({
       `${element.current?.offsetLeft}px`
     );
   }, [windowWidth]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      console.log("updating...");
+      element.current?.style.setProperty(
+        "--glow-top",
+        `${element.current?.offsetTop}px`
+      );
+      element.current?.style.setProperty(
+        "--glow-left",
+        `${element.current?.offsetLeft}px`
+      );
+    }, 650);
+  }, [recalculateBounds]);
 
   return (
     <div ref={element} className={cn("relative", className)}>

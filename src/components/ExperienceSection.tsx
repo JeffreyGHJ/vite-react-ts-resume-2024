@@ -3,14 +3,8 @@ import SectionHeading from "./SectionHeading";
 import ExperienceSectionCarousel from "./ExperienceSectionCarousel";
 import { cn } from "@/lib/utils";
 import Glow from "./Glow";
-import { useEffect, useState } from "react";
 
-const ExperienceSection = () => {
-  const [expandedCard, setExpandedCard] = useState(null);
-
-  useEffect(() => {
-    setExpandedCard(null);
-  }, []);
+const ExperienceSection = ({ expandedCard, setExpandedCard }: any) => {
   return (
     <div
       className={cn(
@@ -24,6 +18,7 @@ const ExperienceSection = () => {
           <Glow
             key={index}
             disabled={expandedCard === index}
+            recalculateBounds={expandedCard}
             className="flex rounded-lg"
           >
             <div

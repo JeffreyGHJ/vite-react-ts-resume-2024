@@ -2,13 +2,17 @@ import Projects from "@/lib/constants/Projects";
 import SectionHeading from "./SectionHeading";
 import Glow from "./Glow";
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ expandedCard }: any) => {
   return (
     <div className="w-full max-w-5xl m-auto">
       <SectionHeading>Personal Projects</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 tracking-tight leading-[1.4] sm:p-0">
         {Projects.map((project, index) => (
-          <Glow key={index} className="flex rounded-lg">
+          <Glow
+            recalculateBounds={expandedCard}
+            key={index}
+            className="flex rounded-lg"
+          >
             <div className="flex flex-col p-3 border rounded-lg shadow-lg border-muted-foreground w-80 sm:w-96">
               {project.site_url ? (
                 <a

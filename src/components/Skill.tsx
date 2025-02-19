@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Glow from "./Glow";
 
-const Skill = ({ index, skill }: any) => {
+const Skill = ({ index, skill, updateGlow }: any) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Skill = ({ index, skill }: any) => {
   };
 
   return (
-    <Glow className="rounded-xl">
+    <Glow recalculateBounds={updateGlow} className="rounded-xl">
       <div
         tabIndex={index}
         className="relative"
