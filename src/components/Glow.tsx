@@ -2,8 +2,11 @@ import useDarkMode from "@/lib/hooks/useDarkMode";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
+const lightModeGradientColor = "rgba(255, 255, 255, 0.3)";
+const darkModeGradientColor = "rgba(0, 0, 0, 0.6)";
+
 const Glow = ({
-  color = `rgba(255, 255, 255, 0.3)`,
+  color = lightModeGradientColor,
   className,
   children,
   ...rest
@@ -27,12 +30,12 @@ const Glow = ({
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Empty dependency array ensures the effect runs once on mount
+  }, []);
 
   useEffect(() => {
     return isDark
-      ? setGradientColor("rgba(255, 255, 255, 0.3)")
-      : setGradientColor("rgba(0, 0, 0, 0.6)");
+      ? setGradientColor(darkModeGradientColor)
+      : setGradientColor(lightModeGradientColor);
   }, [isDark]);
 
   useEffect(() => {
