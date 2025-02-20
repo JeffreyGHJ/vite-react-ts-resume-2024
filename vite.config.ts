@@ -18,7 +18,33 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       workbox: {
-        globPatterns: ["**/*.{js,css,html,png,svg}"],
+        // Workbox configuration here
+        globPatterns: ["**/*.{js,css,html,png,jpg,svg,gif}"], // Cache these asset types
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // Increase cache size to 10 MB
+        runtimeCaching: [
+          {
+            urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/i,
+            handler: "CacheFirst", // Use CacheFirst strategy for images
+            options: {
+              cacheName: "image-cache",
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // Cache for 1 year
+              },
+            },
+          },
+          {
+            urlPattern: /\.(?:mp4|webm)$/i,
+            handler: "StaleWhileRevalidate", // Use StaleWhileRevalidate for video files
+            options: {
+              cacheName: "video-cache",
+              expiration: {
+                maxEntries: 20,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // Cache for 1 year
+              },
+            },
+          },
+        ],
       },
       manifest: {
         name: "My Vite PWA",
