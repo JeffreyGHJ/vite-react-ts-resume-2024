@@ -161,13 +161,13 @@ const MotionThemeSwitcher = () => {
                   }, // Fades out after the drawing finishes
                 }}
                 d={moonSvgPath}
-                className={"stroke-[1.3px]"}
+                className={"stroke-[1.6px]"}
               />
               <m.g
                 variants={rayGroupVariant}
                 initial="hidden"
                 animate={isDark ? "hidden" : "visible"}
-                className="stroke-6 stroke-yellow-500 bg-[#91a6d6] origin-center"
+                className="origin-center stroke-6 stroke-yellow-500"
                 style={{ strokeLinecap: "round" }}
               >
                 <m.path
