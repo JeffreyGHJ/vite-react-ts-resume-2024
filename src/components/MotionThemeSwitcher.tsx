@@ -108,10 +108,16 @@ const MotionThemeSwitcher = () => {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className={"relative"}
+              className={"relative "}
             >
               <m.path
-                initial={{ fillOpacity: 0, strokeOpacity: 0 }}
+                id="main-path"
+                initial={{
+                  fillOpacity: 0,
+                  strokeOpacity: 0,
+                  originX: "center",
+                  originY: "center",
+                }}
                 animate={
                   isDark
                     ? {
@@ -119,8 +125,8 @@ const MotionThemeSwitcher = () => {
                         fill: "#2d59be",
                         fillOpacity: 0.35,
                         strokeOpacity: 1,
-                        rotate: 360,
                         scale: 2,
+                        rotate: 360,
                         d: moonSvgPath,
                       }
                     : {
@@ -167,7 +173,7 @@ const MotionThemeSwitcher = () => {
                 variants={rayGroupVariant}
                 initial="hidden"
                 animate={isDark ? "hidden" : "visible"}
-                className="origin-center stroke-6 stroke-yellow-500"
+                className=" stroke-6 stroke-yellow-500"
                 style={{ strokeLinecap: "round" }}
               >
                 <m.path
