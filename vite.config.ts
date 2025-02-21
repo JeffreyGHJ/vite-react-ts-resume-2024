@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     react(),
     chunkSplitPlugin({
-      strategy: "default", // This automatically splits large dependencies
+      strategy: "unbundle", // This automatically splits large dependencies
     }),
     viteCompression({
       algorithm: "brotliCompress", // Or 'gzip'
