@@ -36,7 +36,7 @@ const Skill = ({ index, skill, updateGlow }: any) => {
               {skill.icon}
             </div>
             {isExpanded && (
-              <div className="w-full text-base items-center justify-end flex leading-[1]">
+              <div className="w-full text-base items-center justify-end flex leading-none">
                 {skill.name}
               </div>
             )}

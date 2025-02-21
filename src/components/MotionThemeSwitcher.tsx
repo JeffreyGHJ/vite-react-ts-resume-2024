@@ -93,7 +93,7 @@ const MotionThemeSwitcher = () => {
   };
 
   return (
-    <div className="fixed right-4 top-4 z-[999999]">
+    <div className="fixed right-4 top-4 z-999999">
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger className="bg-transparent">
           <Button
@@ -117,6 +117,7 @@ const MotionThemeSwitcher = () => {
                   strokeOpacity: 0,
                   originX: "center",
                   originY: "center",
+                  rotate: 0,
                 }}
                 animate={
                   isDark
@@ -157,12 +158,12 @@ const MotionThemeSwitcher = () => {
                 transition={{
                   pathLength: {
                     delay: isDark ? 0.1 : 0,
-                    duration: isDark ? 0.5 : 0,
+                    duration: isDark ? 0.4 : 0,
                     ease: "easeInOut",
                   },
                   opacity: {
-                    delay: 0,
-                    duration: 1,
+                    delay: 0.2,
+                    duration: 0.8,
                     ease: "easeOut",
                   }, // Fades out after the drawing finishes
                 }}
@@ -173,7 +174,7 @@ const MotionThemeSwitcher = () => {
                 variants={rayGroupVariant}
                 initial="hidden"
                 animate={isDark ? "hidden" : "visible"}
-                className=" stroke-6 stroke-yellow-500"
+                className="stroke-yellow-500"
                 style={{ strokeLinecap: "round" }}
               >
                 <m.path
@@ -211,7 +212,7 @@ const MotionThemeSwitcher = () => {
             </m.svg>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="relative mr-4 z-[999999]">
+        <DropdownMenuContent className="relative mr-4 z-999999">
           <DropdownMenuLabel>Themes</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem

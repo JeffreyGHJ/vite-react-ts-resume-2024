@@ -20,25 +20,25 @@ const Header = () => {
     <div className="relative flex flex-col items-center justify-center w-full h-96 ">
       <ParticleCanvas />
       <div className="">
-        <div className="text-5xl font-thin leading-[1] text-center sm:text-6xl z-[99999] relative pointer-events-none">
+        <div className="text-5xl font-thin leading-none text-center sm:text-6xl z-99999 relative pointer-events-none">
           Jeffrey Hernandez
         </div>
         <div className="relative m-auto my-4 w-fit h-fit">
-          <div className="absolute bottom-0 -left-3 animate-wave z-[90]">
-            <div className="relative z-[90] text-3xl h-fit w-fit">🖐️</div>
+          <div className="absolute bottom-0 -left-3 animate-wave z-90">
+            <div className="relative z-90 text-3xl h-fit w-fit">🖐️</div>
           </div>
           <img
             src={"/Me.jpg"}
-            className="relative rounded-full  size-24 z-[89] m-auto border-2 border-secondary shadow-md"
+            className="relative rounded-full  size-24 z-89 m-auto border-2 border-secondary shadow-md"
           ></img>
         </div>
 
-        <div className="mt-4 text-center z-[90] relative">
+        <div className="mt-4 text-center z-90 relative">
           Hi, my name is Jeff and I like to build software!
         </div>
 
         <div className="flex items-center justify-center gap-2 mt-4 transition-all">
-          <div className=" h-7 flex items-center font-semibold text-center z-[90] relative border rounded-full w-fit gap-2 pl-4 pr-3 bg-background/80">
+          <div className=" h-7 flex items-center font-semibold text-center z-90 relative border rounded-full w-fit gap-2 pl-4 pr-3 bg-background/80">
             Jeffreyghj@gmail.com
             <Button
               variant={"ghost"}
@@ -67,7 +67,7 @@ const Header = () => {
           <SiLeetcode className="size-6" /> */}
         </div>
 
-        <div className="z-[99] relative flex justify-center text-muted-foreground-2 mt-4 gap-2">
+        <div className="z-99 relative flex justify-center text-muted-foreground-2 mt-4 gap-2">
           <Button
             title="Link to my GitHub profile"
             variant={"ghost"}
@@ -100,8 +100,8 @@ const Header = () => {
           </Button>
         </div>
       </div>
-      <div className="absolute flex flex-col bottom-0 z-[20] w-full h-36 pointer-events-none">
-        <div className="flex h-full bg-gradient-to-t from-background"></div>
+      <div className="absolute flex flex-col bottom-0 z-20 w-full h-36 pointer-events-none">
+        <div className="flex h-full bg-linear-to-t from-background"></div>
         <div className="w-full h-5 bg-background" />
       </div>
     </div>
