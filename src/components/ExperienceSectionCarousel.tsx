@@ -70,10 +70,10 @@ const ExperienceSectionCarousel = ({
           id={`${sectionName}-carousel`}
           className="flex justify-center w-full h-fit"
         >
-          <Carousel className="w-full h-screen max-h-screen py-8 pb-20 [&>*]:h-full">
+          <Carousel className="w-full h-screen max-h-screen py-8 pb-20 *:h-full">
             <CarouselContent
               id="content"
-              className="h-full [&>*]:h-full w-full "
+              className="h-full *:h-full w-full "
             >
               {images.length > 0 &&
                 images?.map((image: any, index) => (
@@ -139,7 +139,7 @@ const ExperienceSectionCarousel = ({
             scrollCarouselToCenter();
           }}
           variant={"ghost"}
-          className="w-full text-lg text-primary/70 hover:dark:text-primary dark:text-muted-foreground/70"
+          className="w-full text-lg text-primary/70 dark:hover:text-primary dark:text-muted-foreground/70"
         >
           View Slideshow
           <ImageIcon className="size-5" />
