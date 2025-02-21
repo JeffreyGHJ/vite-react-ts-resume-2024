@@ -10,7 +10,11 @@ export default defineConfig({
   plugins: [
     react(),
     chunkSplitPlugin({
-      strategy: "unbundle", // Auto-splits large chunks
+      strategy: "default", // This automatically splits large dependencies
+      customSplitting: {
+        "react-vendor": ["react", "react-dom"], // Moves React-related packages to their own chunk
+        "workbox-vendor": ["workbox-window", "workbox-build"], // Moves Workbox-related code to another chunk
+      },
     }),
     viteCompression({
       algorithm: "brotliCompress", // Or 'gzip'
