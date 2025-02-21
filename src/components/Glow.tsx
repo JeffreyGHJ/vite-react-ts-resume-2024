@@ -3,8 +3,8 @@ import useWindowWidth from "@/lib/hooks/useWindowWidth";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
-const lightModeGradientColor = "rgba(0, 0, 0, 0.6)";
-const darkModeGradientColor = "rgba(255, 255, 255, 0.3)";
+const lightModeGradientColor = "oklch(0% 0 0 / 60%)";
+const darkModeGradientColor = "oklch(100% 0 0 / 30.2%)";
 const transparent = "rgba(0, 0, 0, 0.6)";
 
 const Glow = ({
