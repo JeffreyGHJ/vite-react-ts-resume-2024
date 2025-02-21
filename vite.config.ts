@@ -11,10 +11,6 @@ export default defineConfig({
     react(),
     chunkSplitPlugin({
       strategy: "default", // This automatically splits large dependencies
-      customSplitting: {
-        "react-vendor": ["react", "react-dom"], // Moves React-related packages to their own chunk
-        "workbox-vendor": ["workbox-window", "workbox-build"], // Moves Workbox-related code to another chunk
-      },
     }),
     viteCompression({
       algorithm: "brotliCompress", // Or 'gzip'
@@ -64,6 +60,21 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          // creating a chunk to react routes deps. Reducing the vendor chunk size
+          if (id.includes("react-router-dom") || id.includes("react-router")) {
+            return "@react-router";
+          }
+          if (id.includes("react-dom") || id.includes("react")) {
+            return "@react";
+          }
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
