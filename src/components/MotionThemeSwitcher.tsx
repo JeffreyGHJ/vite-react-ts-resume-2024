@@ -117,6 +117,7 @@ const MotionThemeSwitcher = () => {
                   strokeOpacity: 0,
                   originX: "center",
                   originY: "center",
+                  rotate: 0,
                 }}
                 animate={
                   isDark
@@ -157,12 +158,12 @@ const MotionThemeSwitcher = () => {
                 transition={{
                   pathLength: {
                     delay: isDark ? 0.1 : 0,
-                    duration: isDark ? 0.5 : 0,
+                    duration: isDark ? 0.4 : 0,
                     ease: "easeInOut",
                   },
                   opacity: {
-                    delay: 0,
-                    duration: 1,
+                    delay: 0.2,
+                    duration: 0.8,
                     ease: "easeOut",
                   }, // Fades out after the drawing finishes
                 }}
