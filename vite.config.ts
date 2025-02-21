@@ -1,6 +1,7 @@
 import path from "path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { chunkSplitPlugin } from "vite-plugin-chunk-split";
 import viteCompression from "vite-plugin-compression";
@@ -9,6 +10,7 @@ import viteCompression from "vite-plugin-compression";
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     chunkSplitPlugin({
       strategy: "unbundle", // This automatically splits large dependencies
     }),
