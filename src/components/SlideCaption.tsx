@@ -43,11 +43,11 @@ const SlideCaption = ({
           <div className="absolute w-full h-[100%]">
             <div
               id="gradient-end"
-              className="w-full h-6 -mt-4 flex-grow-1 bg-gradient-to-t from-black/85"
+              className="w-full h-6 -mt-4 flex-grow-1 bg-linear-to-t from-black/85"
             ></div>
             <div
               id="gradient-transition"
-              className="w-full h-[90%] flex-grow-1 bg-gradient-to-t from-black to-black/85"
+              className="w-full h-[90%] flex-grow-1 bg-linear-to-t from-black to-black/85"
             ></div>
             <div id="gradient-bottom" className="w-full h-[55%] bg-black"></div>
           </div>
@@ -59,7 +59,7 @@ const SlideCaption = ({
             title="Show captions"
             variant={"outline"}
             onClick={() => setShowCaptions(true)}
-            className="absolute px-2 shadow-md bottom-1 right-2 border-muted-2 w-fit h-fit text-primary/70 group hover:bg-background hover:border-primary hover:dark:text-white animate-bounce duration-2000 hover:duration-0"
+            className="absolute px-2 shadow-md bottom-1 right-2 border-muted-2 w-fit h-fit text-primary/70 group hover:bg-background hover:border-primary dark:hover:text-white animate-bounce duration-2000 hover:duration-0"
           >
             <BsChatSquareText className="cursor-pointer pointer-events-auto duration-1500 size-8 animate-pulse group-hover:animate-none group-hover:duration-0" />
           </Button>

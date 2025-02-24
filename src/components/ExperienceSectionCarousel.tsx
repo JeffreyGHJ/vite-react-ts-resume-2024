@@ -70,11 +70,8 @@ const ExperienceSectionCarousel = ({
           id={`${sectionName}-carousel`}
           className="flex justify-center w-full h-fit"
         >
-          <Carousel className="w-full h-screen max-h-screen py-8 pb-20 [&>*]:h-full">
-            <CarouselContent
-              id="content"
-              className="h-full [&>*]:h-full w-full "
-            >
+          <Carousel className="w-full h-screen max-h-screen py-8 pb-20 *:h-full">
+            <CarouselContent id="content" className="h-full *:h-full w-full ">
               {images.length > 0 &&
                 images?.map((image: any, index) => (
                   <CarouselItem
@@ -134,12 +131,12 @@ const ExperienceSectionCarousel = ({
       )}
       {expandedCard !== index && images.length > 0 && (
         <Button
+          variant={"secondary"}
           onClick={() => {
             setExpandedCard(index);
             scrollCarouselToCenter();
           }}
-          variant={"ghost"}
-          className="w-full text-lg text-primary/70 hover:dark:text-primary dark:text-muted-foreground/70"
+          className="w-full cursor-pointer text-lg text-primary/70 dark:hover:text-primary dark:text-muted-foreground/70"
         >
           View Slideshow
           <ImageIcon className="size-5" />
