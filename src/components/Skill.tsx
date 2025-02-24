@@ -22,7 +22,7 @@ const Skill = ({ index, skill, updateGlow }: any) => {
       >
         <div
           className={cn(
-            "flex flex-col p-2 gap-1 border-muted-foreground text-muted-foreground-2 border-solid rounded-lg border shadow-lg cursor-pointer transition-all",
+            "flex flex-col p-2 gap-1 border-muted-foreground text-muted-foreground-2 border-solid rounded-lg border shadow-lg transition-all",
             getSkillStyle()
           )}
         >
