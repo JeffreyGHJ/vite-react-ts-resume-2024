@@ -25,6 +25,10 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // Increase cache size to 10 MB
         runtimeCaching: [
           {
+            urlPattern: /^\/documents\/.*\.pdf$/,
+            handler: "NetworkOnly", // Always fetch PDFs from the network
+          },
+          {
             urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/i,
             handler: "CacheFirst", // Use CacheFirst strategy for images
             options: {
