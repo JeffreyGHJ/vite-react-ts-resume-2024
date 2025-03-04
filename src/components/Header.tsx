@@ -2,12 +2,13 @@ import { CheckIcon, CopyIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import ParticleCanvas from "./ParticleCanvas";
 import { SiLeetcode } from "react-icons/si";
 import { Button } from "./ui/button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
+import useReferrer from "@/lib/hooks/useReferrer";
 
 const Header = () => {
   const [showCheck, setShowCheck] = useState(false);
-  const [referrer, setReferrer] = useState("");
+  const referrer = useReferrer();
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("Jeffreyghj@gmail.com");
@@ -16,14 +17,6 @@ const Header = () => {
       setShowCheck(false);
     }, 2000);
   };
-
-  useEffect(() => {
-    setReferrer(document.referrer);
-  }, []);
-
-  useEffect(() => {
-    console.log("referrer: ", referrer);
-  }, [referrer]);
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full h-96 ">

@@ -5,9 +5,11 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 import { Switch } from "./ui/switch";
 import Glow from "./Glow";
+import useReferrer from "@/lib/hooks/useReferrer";
 
 const ResumeDownload = () => {
   const [openInNewTab, setOpenInNewTab] = useState(true);
+  const referrer = useReferrer();
 
   return (
     <div className="w-full">
@@ -21,9 +23,17 @@ const ResumeDownload = () => {
             asChild
           >
             <a
-              href="/documents/Jeffrey_Hernandez_Standard_Resume.pdf"
+              href={
+                referrer.includes("upwork.com")
+                  ? "/documents/Jeffrey_Hernandez_Standard_Upwork_Resume.pdf"
+                  : "/documents/Jeffrey_Hernandez_Standard_Resume.pdf"
+              }
               download={
-                openInNewTab ? "Jeffrey_Hernandez_Standard_Resume.pdf" : null
+                openInNewTab
+                  ? referrer.includes("upwork.com")
+                    ? "Jeffrey_Hernandez_Standard_Upwork_Resume.pdf"
+                    : "Jeffrey_Hernandez_Standard_Resume.pdf"
+                  : null
               }
               className="flex flex-col items-center gap-4 p-4 pb-8 text-xl w-fit"
               target={openInNewTab ? undefined : "_blank"}
@@ -41,9 +51,17 @@ const ResumeDownload = () => {
             asChild
           >
             <a
-              href="/documents/Jeffrey_Hernandez_Extended_Resume.pdf"
+              href={
+                referrer.includes("upwork.com")
+                  ? "/documents/Jeffrey_Hernandez_Extended_Upwork_Resume.pdf"
+                  : "/documents/Jeffrey_Hernandez_Extended_Resume.pdf"
+              }
               download={
-                openInNewTab ? "Jeffrey_Hernandez_Extended_Resume.pdf" : null
+                openInNewTab
+                  ? referrer.includes("upwork.com")
+                    ? "Jeffrey_Hernandez_Extended_Upwork_Resume.pdf"
+                    : "Jeffrey_Hernandez_Extended_Resume.pdf"
+                  : null
               }
               className="flex flex-col items-center gap-4 p-4 pb-8 text-xl w-fit"
               target={openInNewTab ? undefined : "_blank"}
