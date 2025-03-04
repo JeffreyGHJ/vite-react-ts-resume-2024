@@ -7,10 +7,6 @@ const useReferrer = () => {
     setReferrer(document.referrer);
   }, []);
 
-  useEffect(() => {
-    console.log("referrer: ", referrer);
-  }, [referrer]);
-
   return referrer;
 };
 

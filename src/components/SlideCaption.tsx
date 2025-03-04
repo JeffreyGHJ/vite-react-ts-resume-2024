@@ -13,7 +13,7 @@ const SlideCaption = ({
   useEffect(() => {
     const el = document.getElementById(`caption-${sectionName}-${index}`);
     if (el) el.innerHTML = caption;
-    console.log("setting captions for: ", `caption-${sectionName}-${index}`);
+    // console.log("setting captions for: ", `caption-${sectionName}-${index}`);
   });
 
   return (
