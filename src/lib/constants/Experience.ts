@@ -60,6 +60,38 @@ const Experience = [
     location: "Remote",
     sectionName: "atlantis",
   },
+  {
+    name: "Drip.market",
+    url: "",
+    role: "Code Janitor/Frontend Engineer - Freelance",
+    description: "",
+    details: [
+      "Hired to clean up and maintain pages produced by AI agents in the codebase for a web3 marketplace",
+      "Refactored monolithic collections page from 9000+ lines of code to ~700 lines of code (~92% reduction) while preserving all functionality",
+      "Maintained and improved existing codebase while ensuring full responsiveness for mobile platforms",
+      "Continuously implemented pixel perfect UI changes to match rapidly evolving design requirements from the product team",
+      "Standardized styles to reduce inconsistencies across the entire codebase",
+    ],
+    timeframe: "2025 - 2025",
+    location: "Remote",
+    sectionName: "drip",
+  },
+  {
+    name: "DataAnnotation.ai",
+    url: "",
+    role: "Contract Software Engineer",
+    description: "",
+    details: [
+      "Evaluating and rating the quality of AI-generated outputs to compare and rank various industry-leading LLM model performance against each other",
+      "Providing high-quality inputs for Reinforced Learning with Human Feedback (RLHF) to help improve the quality of AI-generated code",
+      "Validating the effectiveness of custom finetuned models in controlled environments to test regression and evaluate viablity of proprietary classified/private LLMs",
+      "Crafting complex, reusable `API` prompts with multi-layered hierarchical rules to stress-test reliability and prioritization of LLM instruction following",
+      "Rating, reviewing, and editing submissions from other DataAnnotation contractors to improve alignment and correctness of human feedback to be used as training data",
+    ],
+    timeframe: "2025 - 2026 (Present)",
+    location: "Remote",
+    sectionName: "dataannotation",
+  },
 ];
 
 export default Experience;
