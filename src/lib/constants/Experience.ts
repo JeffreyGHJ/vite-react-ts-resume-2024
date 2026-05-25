@@ -68,7 +68,7 @@ const Experience = [
     details: [
       "Hired to clean up and maintain pages produced by AI agents in the codebase for a web3 marketplace",
       "Refactored monolithic collections page from 9000+ lines of code to ~700 lines of code (~92% reduction) while preserving all functionality",
-      "Maintained and improved existing codebase while ensuring full responsiveness for mobile platforms",
+      "Maintained and improved existing codebase while implementing new features and ensuring full responsiveness for mobile platforms",
       "Continuously implemented pixel perfect UI changes to match rapidly evolving design requirements from the product team",
       "Standardized styles to reduce inconsistencies across the entire codebase",
     ],
@@ -77,8 +77,8 @@ const Experience = [
     sectionName: "drip",
   },
   {
-    name: "DataAnnotation.ai",
-    url: "",
+    name: "DataAnnotation.tech",
+    url: "https://www.dataannotation.tech",
     role: "Contract Software Engineer",
     description: "",
     details: [

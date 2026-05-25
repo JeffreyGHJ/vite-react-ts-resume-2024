@@ -1,25 +1,17 @@
-import Projects from "@/lib/constants/Projects";
+import SchoolProjects from "@/lib/constants/SchoolProjects";
 import SectionHeading from "./SectionHeading";
 import Glow from "./Glow";
 
-const ProjectsSection = ({ expandedCard }: any) => {
+const SchoolProjectsSection = ({ expandedCard }: any) => {
   return (
     <div className="w-full max-w-5xl m-auto">
-      <SectionHeading>Personal Projects</SectionHeading>
+      <SectionHeading>School Projects</SectionHeading>
       <div className="flex flex-wrap justify-center w-full gap-6 p-1 tracking-tight leading-[1.4] sm:p-0">
-        {Projects.map((project, index) => (
-          <Glow
-            recalculateBounds={expandedCard}
-            key={index}
-            className="flex rounded-lg"
-          >
+        {SchoolProjects.map((project, index) => (
+          <Glow recalculateBounds={expandedCard} key={index} className="flex rounded-lg">
             <div className="flex flex-col p-3 border rounded-lg shadow-lg border-muted-foreground w-80 sm:w-96">
               {project.site_url ? (
-                <a
-                  href={project.site_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={project.site_url} target="_blank" rel="noopener noreferrer">
                   <div className="flex items-center justify-center my-3 text-3xl font-semibold text-center transition-transform duration-500 cursor-pointer min-h-20 hover:scale-110">
                     {project.name}
                   </div>
@@ -52,4 +44,4 @@ const ProjectsSection = ({ expandedCard }: any) => {
     </div>
   );
 };
-export default ProjectsSection;
+export default SchoolProjectsSection;

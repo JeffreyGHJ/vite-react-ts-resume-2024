@@ -1,6 +1,6 @@
 import EducationSection from "@/components/EducationSection";
 import SkillsSection from "@/components/SkillsSection";
-import ProjectsSection from "@/components/ProjectsSection";
+import SchoolProjectsSection from "@/components/SchoolProjectsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import AppFooter from "@/components/AppFooter";
 import ResumeDownload from "@/components/ResumeDownload";
@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import GlowArea from "@/components/GlowArea";
 import { useEffect, useState } from "react";
 import MotionThemeSwitcher from "@/components/MotionThemeSwitcher";
+import PersonalProjectsSection from "@/components/PersonalProjectsSection";
 
 function Home() {
   // Useful debug
@@ -25,13 +26,11 @@ function Home() {
       <MotionThemeSwitcher />
       <GlowArea>
         <ResumeDownload />
-        <ExperienceSection
-          expandedCard={expandedCard}
-          setExpandedCard={setExpandedCard}
-        />
+        <ExperienceSection expandedCard={expandedCard} setExpandedCard={setExpandedCard} />
         <SkillsSection expandedCard={expandedCard} />
-        <ProjectsSection expandedCard={expandedCard} />
+        <PersonalProjectsSection expandedCard={expandedCard} />
         <EducationSection expandedCard={expandedCard} />
+        <SchoolProjectsSection expandedCard={expandedCard} />
         <AppFooter />
       </GlowArea>
     </div>
