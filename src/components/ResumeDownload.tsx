@@ -26,13 +26,13 @@ const ResumeDownload = () => {
               href={
                 referrer.includes("upwork.com")
                   ? "/documents/Jeffrey_Hernandez_Standard_Upwork_Resume.pdf"
-                  : "/documents/Jeffrey_Hernandez_Standard_Resume.pdf"
+                  : "/documents/Jeffrey_Hernandez_Resume_2026.pdf"
               }
               download={
                 openInNewTab
                   ? referrer.includes("upwork.com")
                     ? "Jeffrey_Hernandez_Standard_Upwork_Resume.pdf"
-                    : "Jeffrey_Hernandez_Standard_Resume.pdf"
+                    : "Jeffrey_Hernandez_Resume_2026.pdf"
                   : null
               }
               className="flex flex-col items-center gap-4 p-4 pb-8 text-xl w-fit"
@@ -54,13 +54,13 @@ const ResumeDownload = () => {
               href={
                 referrer.includes("upwork.com")
                   ? "/documents/Jeffrey_Hernandez_Extended_Upwork_Resume.pdf"
-                  : "/documents/Jeffrey_Hernandez_Extended_Resume.pdf"
+                  : "/documents/Jeffrey_Hernandez_Extended_Resume_2026.pdf"
               }
               download={
                 openInNewTab
                   ? referrer.includes("upwork.com")
                     ? "Jeffrey_Hernandez_Extended_Upwork_Resume.pdf"
-                    : "Jeffrey_Hernandez_Extended_Resume.pdf"
+                    : "Jeffrey_Hernandez_Extended_Resume_2026.pdf"
                   : null
               }
               className="flex flex-col items-center gap-4 p-4 pb-8 text-xl w-fit"
@@ -77,14 +77,8 @@ const ResumeDownload = () => {
         </Glow>
       </div>
       <div className="flex items-center justify-center w-full gap-2 mt-8 text-sm text-muted-foreground">
-        <Switch
-          checked={openInNewTab}
-          onCheckedChange={setOpenInNewTab}
-          id="new-tab"
-        />
-        <label htmlFor="new-tab">
-          {openInNewTab ? "Download and save file" : "Open file in new tab"}
-        </label>
+        <Switch checked={openInNewTab} onCheckedChange={setOpenInNewTab} id="new-tab" />
+        <label htmlFor="new-tab">{openInNewTab ? "Download and save file" : "Open file in new tab"}</label>
       </div>
     </div>
   );
