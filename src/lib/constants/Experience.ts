@@ -84,7 +84,7 @@ const Experience = [
     details: [
       "Evaluating and rating the quality of AI-generated outputs to compare and rank various industry-leading LLM model performance against each other",
       "Providing high-quality inputs for Reinforced Learning with Human Feedback (RLHF) to help improve the quality of AI-generated code",
-      "Validating the effectiveness of custom finetuned models in controlled environments to test regression and evaluate viablity of proprietary classified/private LLMs",
+      "Validating the effectiveness of custom finetuned models in controlled environments to test regression and evaluate viability of proprietary classified/private LLMs",
       "Crafting complex, reusable `API` prompts with multi-layered hierarchical rules to stress-test reliability and prioritization of LLM instruction following",
       "Rating, reviewing, and editing submissions from other DataAnnotation contractors to improve alignment and correctness of human feedback to be used as training data",
     ],
