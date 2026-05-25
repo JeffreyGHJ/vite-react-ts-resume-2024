@@ -11,7 +11,7 @@ const PersonalProjects = [
       "A simulated desktop OS experience where the user manages windows and applications to interact with the game",
       "Upgradable computer hardware determines the speed and efficiency of the player's actions",
       "Manage a queue of jobs/tasks, balancing hardware capacity and active jobs against execution speed",
-      "Scan the network map and Hack into NPC systems with the appropriate software to gain access to their systems",
+      "Scan the network map for IP addresses and Hack into NPC computers using the appropriate software to gain access to their systems",
       "Steal programs, plant viruses, collect money, and upgrade your hardware to dominate the network",
       "ROADMAP: implement persistence, add money generation via viruses, enable hardware upgrades",
     ],
