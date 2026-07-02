@@ -15,7 +15,7 @@ const Experience = [
   },
   {
     name: "LittleGhosts.io",
-    url: "https://littleghosts.io/",
+    url: "https://phantasma-website-demo.vercel.app/",
     role: "Fullstack Engineer - Freelance",
     description: "",
     details: [
@@ -30,7 +30,7 @@ const Experience = [
   },
   {
     name: "Phantasma MMO",
-    url: "https://littleghosts.io/",
+    url: "https://phantasma-website-demo.vercel.app/",
     role: "Fullstack Engineer/Game Dev - Freelance",
     description: "",
     details: [

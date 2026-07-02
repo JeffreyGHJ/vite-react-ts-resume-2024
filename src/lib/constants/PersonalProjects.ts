@@ -2,7 +2,7 @@ const PersonalProjects = [
   {
     name: "Net-Hack Game",
     image_url: "",
-    site_url: "https://github.com/JeffreyGHJ/react-monster-cards",
+    site_url: "https://net-hack.vercel.app/",
     location: "",
     timeframe: "2026",
     role: "Full Stack - TypeScript (React + Next.js)",
