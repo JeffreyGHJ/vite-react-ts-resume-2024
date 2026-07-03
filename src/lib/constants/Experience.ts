@@ -1,7 +1,7 @@
 const Experience = [
   {
     name: "GhostSwap.finance",
-    url: "https://www.ghostswap.finance/",
+    url: "https://ghostswap-demo.vercel.app/",
     role: "Fullstack Engineer - Freelance",
     description: "",
     details: [
