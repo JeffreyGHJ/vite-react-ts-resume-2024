@@ -62,7 +62,7 @@ const Experience = [
   },
   {
     name: "Drip.market",
-    url: "",
+    url: "https://drip-market-demo.vercel.app/",
     role: "Code Janitor/Frontend Engineer - Freelance",
     description: "",
     details: [
