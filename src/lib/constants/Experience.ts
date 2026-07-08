@@ -46,7 +46,7 @@ const Experience = [
   },
   {
     name: "Atlantis.fun",
-    url: "https://atlantis-frontend-ochre.vercel.app/",
+    url: "https://atlantis-frontend-demo.vercel.app/",
     role: "Fullstack Engineer - Freelance",
     description: "",
     details: [
